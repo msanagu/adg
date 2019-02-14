@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif; }
+
+header {
+  text-align: center;
+  padding: 18px 0 25px;
+  border-top: 5px solid #f6bd60;
+  background: #fff; }
+
+footer {
+  color: #777777; }
+  footer a,
+  footer a:hover {
+    text-decoration: none;
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    color: #777777; }
+  footer .dk-grey {
+    text-align: center;
+    padding: 0;
+    background: #333333; }
+    footer .dk-grey .footer-menu {
+      padding: 25px 32%; }
