@@ -1,0 +1,59 @@
+// tablet
+@include mediaM {
+  body {
+    .jumbotron {
+      div#bullet-list {
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+
+      .bullets {
+        li {
+          margin-bottom: 2.75rem;
+
+          &:nth-child(1) {
+            margin-top: 0.75rem;
+          }
+
+          span {
+            margin-left: 10px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// smartphones (max-width: 480px)
+@include mediaS {
+  body {
+    .jumbotron {
+      .header {
+        margin: -15px 0 45px 0;
+
+        h1 {
+          font-size: 2rem;
+        }
+        h4 {
+          font-size: 1.25rem;
+        }
+      }
+      .bullets {
+        margin-top: 1.75rem;
+
+        button.cta {
+          width: 93%;
+        }
+      }
+    }
+  }
+
+  footer {
+    .dk-grey {
+      .footer-menu {
+        padding: 25px 5%;
+      }
+    }
+  }
+}

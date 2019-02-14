@@ -1,0 +1,41 @@
+// mixins
+@mixin btn {
+  background-color: #17bebb;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+// media query mixins
+@mixin mediaXS {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mediaS {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mediaM {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaL {
+  @media screen and (min-width: 769px) and (max-width: 2000px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media screen and (min-width: 2000px) {
+    @content;
+  }
+}
