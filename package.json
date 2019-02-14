@@ -1,0 +1,18 @@
+{
+  "name": "cloveandcactus",
+  "version": "1.0.0",
+  "description": "ADG Code Challenge",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Mary San Agustin",
+  "license": "MIT"
+}
