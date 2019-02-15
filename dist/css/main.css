@@ -141,6 +141,19 @@ body {
             box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
             -webkit-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+    body main .banner {
+      background-image: url("../img/banner/bg-leaves.png");
+      padding: 45px 10% 20px;
+      display: table;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center; }
+      body main .banner .banner-header {
+        display: table-cell;
+        vertical-align: middle;
+        color: #fff; }
+        body main .banner .banner-header p {
+          padding-top: 20px; }
 
 footer {
   color: #777777;
@@ -190,6 +203,17 @@ footer {
       margin-left: 5px; }
     body .jumbotron .row div#bullet-list-1 .bullets li button.cta {
       width: 100%; }
+  body .jumbotron .img-carousel img#main-image {
+    width: 375px;
+    height: 250px; }
+  body .jumbotron .img-carousel img.img-thumbnail {
+    padding: 0;
+    height: 55px;
+    width: 55px;
+    margin: 0 5px;
+    object-fit: cover; }
+    body .jumbotron .img-carousel img.img-thumbnail:nth-child(1) {
+      margin-left: 0; }
   body main .featured .featured-header p:before {
     width: 25vw; }
   body main .featured .featured-header p:after {

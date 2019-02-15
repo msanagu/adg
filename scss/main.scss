@@ -138,6 +138,28 @@ body {
         }
       }
     }
+
+    .banner {
+      background: {
+        image: url("../img/banner/bg-leaves.png");
+      }
+      //   height: 215px;
+      padding: 45px 10% 20px;
+      display: table;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+
+      .banner-header {
+        display: table-cell;
+        vertical-align: middle;
+        color: #fff;
+
+        p {
+          padding-top: 20px;
+        }
+      }
+    }
   }
 }
 

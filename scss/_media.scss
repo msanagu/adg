@@ -69,6 +69,27 @@
           }
         }
       }
+
+      .img-carousel {
+        img {
+          &#main-image {
+            width: 375px;
+            height: 250px;
+          }
+
+          &.img-thumbnail {
+            padding: 0;
+            height: 55px;
+            width: 55px;
+            margin: 0 5px;
+            object-fit: cover;
+
+            &:nth-child(1) {
+              margin-left: 0;
+            }
+          }
+        }
+      }
     }
 
     main {
