@@ -27,7 +27,7 @@
   </header>
 
   <body class="container-fluid">
-    <section class="jumbotron">
+    <section class="main-jumbotron jumbotron">
       <div class="jumbotron-header">
         <h1>Lorem? Ipsum!</h1>
         <h4>Stet postea perfecto ei sed, usu error numquam te!</h4>
@@ -41,7 +41,7 @@
           />
         </div>
 
-        <div id="bullet-list" class="col-m">
+        <div id="bullet-list-1" class="col-m">
           <ul class="bullets list-unstyled">
             <li>
               <img src="./img/jumbotron/bullet.png" alt="Blue checkmark" />
@@ -55,7 +55,7 @@
               <img src="./img/jumbotron/bullet.png" alt="Blue checkmark" />
               <span>Aliquid insolens quo mei minim quaestio!</span>
             </li>
-            <li><button class="cta">Ut Sea Minim!</button></li>
+            <li><button id="cta-1" class="cta">Ut Sea Minim!</button></li>
           </ul>
         </div>
       </div>
@@ -103,6 +103,69 @@
         </p>
       </section>
 
+      <section class="carousel-jumbotron jumbotron">
+        <div class="row">
+          <div id="bullet-list-2" class="col-lg-6">
+            <ul class="bullets list-unstyled">
+              <li>
+                <img src="./img/jumbotron/bullet.png" alt="Blue checkmark" />
+                <span>Iisque regione, elitr veritus singulis no ius</span>
+              </li>
+              <li>
+                <img src="./img/jumbotron/bullet.png" alt="Blue checkmark" />
+                <span>Qui novum exerci splendide eu verdad</span>
+              </li>
+              <li>
+                <img src="./img/jumbotron/bullet.png" alt="Blue checkmark" />
+                <span>Aliquid insolens quo mei minim quaestio!</span>
+              </li>
+              <li><button id="cta-2" class="cta">Ut Sea Minim!</button></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="img-carousel col-lg-6">
+              <img
+                id="main-image"
+                class="img-lg"
+                src="./img/carousel/thumb1.png"
+                alt="Large Product Image"
+              />
+              <br />
+
+              <div class="thumbnails" onClick="changeImage(event)">
+                <img
+                  src="./img/carousel/thumb1.png"
+                  alt="Small Product Image"
+                  class="img-thumbnail"
+                />
+                <img
+                  src="./img/carousel/thumb2.png"
+                  alt="Small Product Image"
+                  class="img-thumbnail"
+                />
+                <img
+                  src="./img/carousel/thumb3.png"
+                  alt="Small Product Image"
+                  class="img-thumbnail"
+                />
+                <img
+                  src="./img/carousel/thumb4.png"
+                  alt="Small Product Image"
+                  class="img-thumbnail"
+                />
+                <img
+                  src="./img/carousel/thumb5.png"
+                  alt="Small Product Image"
+                  class="img-thumbnail"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scripts -->
       <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -118,13 +181,16 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"
       ></script>
+      <script src="js/main.js"></script>
     </main>
   </body>
 
   <footer class="page-footer font-small">
     <div class="dk-grey">
       <ul class="footer-menu list-unstyled nav justify-content-center">
-        <a href="#"><li class="footer-link nav-item">Support</li></a>
+        <a href="./carousel.html"
+          ><li class="footer-link nav-item">Support</li></a
+        >
         <a href="#"><li class="footer-link nav-item">Returns</li></a>
         <a href="#"><li class="footer-link nav-item">Privacy</li></a>
         <a href="#"><li class="footer-link nav-item">Terms</li></a>

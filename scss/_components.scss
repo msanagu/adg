@@ -1,0 +1,42 @@
+// Image Carousel
+
+body {
+  .img-carousel {
+    width: 100%;
+    height: auto;
+
+    div.thumbnails {
+      padding-top: 40px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+
+    img {
+      &#main-image {
+        width: 525px;
+        height: 350px;
+        object-fit: cover;
+      }
+
+      &.img-thumbnail {
+        padding: 0;
+        height: 90px;
+        width: 90px;
+        margin: 0 5px;
+        object-fit: cover;
+
+        &:nth-child(1) {
+          margin-left: 15px;
+        }
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        border: 2px solid #bbbbbb;
+      }
+    }
+  }
+}

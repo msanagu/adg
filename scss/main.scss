@@ -1,4 +1,5 @@
 @import "config";
+@import "components";
 
 // fonts
 @import url("https://fonts.googleapis.com/css?family=Lato");
@@ -21,7 +22,7 @@ body {
   height: 100%;
   margin: 0;
 
-  .jumbotron {
+  .main-jumbotron {
     margin-bottom: 0;
     background: {
       image: url("../img/jumbotron/bg-gold.png");
@@ -43,22 +44,9 @@ body {
     }
 
     .bullets {
-      margin-left: 20px;
+      @include bulletList;
 
-      li {
-        margin-bottom: 3.75rem;
-
-        &:nth-child(1) {
-          margin-top: 0.75rem;
-        }
-
-        span {
-          margin-left: 10px;
-          font-size: 1.25rem;
-        }
-      }
-
-      button.cta {
+      button#cta-1 {
         width: 400px;
         padding: 10px 0;
         text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
@@ -125,6 +113,29 @@ body {
         font-weight: 500;
         font-size: 2.25rem;
         font-weight: 400;
+      }
+
+      .carousel-jumbotron {
+        background: {
+          image: url("../img/carousel/bg-abstract.png");
+          size: cover;
+        }
+
+        .row {
+          #bullet-list-2 {
+            .bullets {
+              @include bulletList;
+
+              button#cta-2 {
+                width: 400px;
+                padding: 10px 0;
+                text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+                border: none;
+                @include btn;
+              }
+            }
+          }
+        }
       }
     }
   }

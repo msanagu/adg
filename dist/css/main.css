@@ -1,4 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
+body .img-carousel {
+  width: 100%;
+  height: auto; }
+  body .img-carousel div.thumbnails {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto; }
+  body .img-carousel img#main-image {
+    width: 525px;
+    height: 350px;
+    object-fit: cover; }
+  body .img-carousel img.img-thumbnail {
+    padding: 0;
+    height: 90px;
+    width: 90px;
+    margin: 0 5px;
+    object-fit: cover; }
+    body .img-carousel img.img-thumbnail:nth-child(1) {
+      margin-left: 15px; }
+  body .img-carousel img:active, body .img-carousel img:focus {
+    outline: none;
+    border: 2px solid #bbbbbb; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,28 +39,28 @@ body {
   font-family: "Lato", sans-serif;
   height: 100%;
   margin: 0; }
-  body .jumbotron {
+  body .main-jumbotron {
     margin-bottom: 0;
     background-image: url("../img/jumbotron/bg-gold.png");
     background-size: cover; }
-    body .jumbotron .youtube {
+    body .main-jumbotron .youtube {
       width: 100%;
       height: auto; }
-    body .jumbotron .jumbotron-header {
+    body .main-jumbotron .jumbotron-header {
       text-align: center;
       margin: -40px 0 45px 0; }
-      body .jumbotron .jumbotron-header h1 {
+      body .main-jumbotron .jumbotron-header h1 {
         font-weight: 800; }
-    body .jumbotron .bullets {
+    body .main-jumbotron .bullets {
       margin-left: 20px; }
-      body .jumbotron .bullets li {
+      body .main-jumbotron .bullets li {
         margin-bottom: 3.75rem; }
-        body .jumbotron .bullets li:nth-child(1) {
+        body .main-jumbotron .bullets li:nth-child(1) {
           margin-top: 0.75rem; }
-        body .jumbotron .bullets li span {
+        body .main-jumbotron .bullets li span {
           margin-left: 10px;
           font-size: 1.25rem; }
-      body .jumbotron .bullets button.cta {
+      body .main-jumbotron .bullets button#cta-1 {
         width: 400px;
         padding: 10px 0;
         text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
@@ -91,6 +116,31 @@ body {
         font-weight: 500;
         font-size: 2.25rem;
         font-weight: 400; }
+      body main .carousel .carousel-jumbotron {
+        background-image: url("../img/carousel/bg-abstract.png");
+        background-size: cover; }
+        body main .carousel .carousel-jumbotron .row #bullet-list-2 .bullets {
+          margin-left: 20px; }
+          body main .carousel .carousel-jumbotron .row #bullet-list-2 .bullets li {
+            margin-bottom: 3.75rem; }
+            body main .carousel .carousel-jumbotron .row #bullet-list-2 .bullets li:nth-child(1) {
+              margin-top: 0.75rem; }
+            body main .carousel .carousel-jumbotron .row #bullet-list-2 .bullets li span {
+              margin-left: 10px;
+              font-size: 1.25rem; }
+          body main .carousel .carousel-jumbotron .row #bullet-list-2 .bullets button#cta-2 {
+            width: 400px;
+            padding: 10px 0;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+            border: none;
+            background-color: #17bebb;
+            color: #fff;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75); }
 
 footer {
   color: #777777;
@@ -110,14 +160,14 @@ footer {
       padding: 25px 32%; }
 
 @media screen and (max-width: 768px) {
-  body .jumbotron .row div#bullet-list {
+  body .jumbotron .row div#bullet-list-1 {
     margin: 0 auto;
     margin-top: 2rem; }
-    body .jumbotron .row div#bullet-list .bullets li {
+    body .jumbotron .row div#bullet-list-1 .bullets li {
       margin-bottom: 2.25rem; }
-      body .jumbotron .row div#bullet-list .bullets li:nth-child(1) {
+      body .jumbotron .row div#bullet-list-1 .bullets li:nth-child(1) {
         margin-top: 0.75rem; }
-      body .jumbotron .row div#bullet-list .bullets li span {
+      body .jumbotron .row div#bullet-list-1 .bullets li span {
         margin-left: 10px;
         font-size: 1.25rem; }
   body .jumbotron .carousel {
@@ -133,12 +183,12 @@ footer {
       padding-top: 1rem; }
     body .jumbotron .jumbotron-header h4 {
       font-size: 1.25rem; }
-  body .jumbotron .row div#bullet-list .bullets {
+  body .jumbotron .row div#bullet-list-1 .bullets {
     margin: 0.15rem 0 0 0; }
-    body .jumbotron .row div#bullet-list .bullets li span {
+    body .jumbotron .row div#bullet-list-1 .bullets li span {
       font-size: 0.95rem;
       margin-left: 5px; }
-    body .jumbotron .row div#bullet-list .bullets li button.cta {
+    body .jumbotron .row div#bullet-list-1 .bullets li button.cta {
       width: 100%; }
   body main .featured .featured-header p:before {
     width: 25vw; }
