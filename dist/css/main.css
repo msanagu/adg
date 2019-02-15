@@ -21,10 +21,10 @@ body {
     body .jumbotron .youtube {
       width: 100%;
       height: auto; }
-    body .jumbotron .header {
+    body .jumbotron .jumbotron-header {
       text-align: center;
       margin: -40px 0 45px 0; }
-      body .jumbotron .header h1 {
+      body .jumbotron .jumbotron-header h1 {
         font-weight: 800; }
     body .jumbotron .bullets {
       margin-left: 20px; }
@@ -44,12 +44,53 @@ body {
         color: #fff;
         font-size: 1.5rem;
         border-radius: 5px;
+        cursor: pointer;
         box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
         -webkit-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75); }
   body main {
     height: 100%;
     min-height: calc(100vh - 215px); }
+    body main .featured {
+      background: #ffffea; }
+      body main .featured .featured-header {
+        text-align: center;
+        padding-top: 5px; }
+        body main .featured .featured-header p {
+          font-weight: 800;
+          padding: 15px 0 0; }
+          body main .featured .featured-header p:before {
+            content: "";
+            display: inline-block;
+            margin-right: 20px;
+            width: 40vw;
+            transform: translateY(-4px);
+            border-top: 1px solid #c4c4c4; }
+          body main .featured .featured-header p:after {
+            content: "";
+            display: inline-block;
+            margin-left: 20px;
+            width: 40vw;
+            transform: translateY(-4px);
+            border-top: 1px solid #c4c4c4; }
+      body main .featured ul.featured-logos {
+        display: flex;
+        align-items: center;
+        padding: 20px 0 30px 0; }
+    body main .carousel {
+      background: #93b7be;
+      height: 108px;
+      display: table;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center; }
+      body main .carousel .carousel-header {
+        display: table-cell;
+        vertical-align: middle;
+        color: #fff;
+        font-weight: 500;
+        font-size: 2.25rem;
+        font-weight: 400; }
 
 footer {
   color: #777777;
@@ -69,27 +110,45 @@ footer {
       padding: 25px 32%; }
 
 @media screen and (max-width: 768px) {
-  body .jumbotron div#bullet-list {
+  body .jumbotron .row div#bullet-list {
     margin: 0 auto;
     margin-top: 2rem; }
-  body .jumbotron .bullets li {
-    margin-bottom: 2.75rem; }
-    body .jumbotron .bullets li:nth-child(1) {
-      margin-top: 0.75rem; }
-    body .jumbotron .bullets li span {
-      margin-left: 10px;
-      font-size: 1rem; } }
+    body .jumbotron .row div#bullet-list .bullets li {
+      margin-bottom: 2.25rem; }
+      body .jumbotron .row div#bullet-list .bullets li:nth-child(1) {
+        margin-top: 0.75rem; }
+      body .jumbotron .row div#bullet-list .bullets li span {
+        margin-left: 10px;
+        font-size: 1.25rem; }
+  body .jumbotron .carousel {
+    padding: 10%; }
+    body .jumbotron .carousel .carousel-header {
+      font-size: 1.75rem; } }
 
 @media screen and (max-width: 480px) {
-  body .jumbotron .header {
+  body .jumbotron .jumbotron-header {
     margin: -15px 0 45px 0; }
-    body .jumbotron .header h1 {
-      font-size: 2rem; }
-    body .jumbotron .header h4 {
+    body .jumbotron .jumbotron-header h1 {
+      font-size: 2rem;
+      padding-top: 1rem; }
+    body .jumbotron .jumbotron-header h4 {
       font-size: 1.25rem; }
-  body .jumbotron .bullets {
-    margin-top: 1.75rem; }
-    body .jumbotron .bullets button.cta {
-      width: 93%; }
+  body .jumbotron .row div#bullet-list .bullets {
+    margin: 0.15rem 0 0 0; }
+    body .jumbotron .row div#bullet-list .bullets li span {
+      font-size: 0.95rem;
+      margin-left: 5px; }
+    body .jumbotron .row div#bullet-list .bullets li button.cta {
+      width: 100%; }
+  body main .featured .featured-header p:before {
+    width: 25vw; }
+  body main .featured .featured-header p:after {
+    width: 25vw; }
+  body main .featured .featured-logos li.nav-item.col-sm-3 {
+    padding: 20px 55px; }
+  body main .carousel .carousel-header {
+    font-size: 1.25rem; }
   footer .dk-grey .footer-menu {
-    padding: 25px 5%; } }
+    padding: 25px 5%; }
+  footer .dk-grey .copyright p {
+    font-size: 0.75rem; } }
