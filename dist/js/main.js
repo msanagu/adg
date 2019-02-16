@@ -9,5 +9,9 @@ const changeImage = event => {
 
   // Change the main image src to the target element's src
   let mainImage = document.getElementById("main-image");
-  mainImage.src = targetElement.getAttribute("src");
+
+  // Only change the image if the click happens on image and not any other part of the div element
+  if (targetElement.tagName == "IMG") {
+    mainImage.src = targetElement.getAttribute("src");
+  }
 };
