@@ -1,6 +1,6 @@
 // Image Carousel
-
-const thumbnail = document.querySelector(".img-thumbnail");
+const thumbnail = document.querySelectorAll(".img-thumbnail");
+const option = document.querySelector(".option");
 
 const changeImage = event => {
   // Compatibility with Internet Explorer 8 and earlier
@@ -15,3 +15,10 @@ const changeImage = event => {
     mainImage.src = targetElement.getAttribute("src");
   }
 };
+
+const toggleOption = () => {
+  option.classList.toggle("selected");
+};
+
+// Listen for option click
+option.addEventListener("click", toggleOption);
