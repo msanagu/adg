@@ -17,6 +17,10 @@ header {
   background: #fff;
 }
 
+.cta {
+  @include btn;
+}
+
 body {
   font-family: "Lato", sans-serif;
   height: 100%;
@@ -48,10 +52,6 @@ body {
 
       button#cta-1 {
         width: 400px;
-        padding: 10px 0;
-        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-        border: none;
-        @include btn;
       }
     }
   }
@@ -129,11 +129,9 @@ body {
               @include bulletList;
 
               button#cta-2 {
+                font-size: 1.15rem;
+                padding: 12px 0;
                 width: 400px;
-                padding: 10px 0;
-                text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-                border: none;
-                @include btn;
               }
             }
           }
@@ -173,9 +171,7 @@ body {
       text-align: center;
 
       .points-header {
-        text-align: center;
-        font-weight: 800;
-        margin: 1rem auto;
+        @include boldCenteredHeader;
       }
 
       .teardrops {
@@ -205,6 +201,7 @@ body {
             text-align: left;
             margin-left: 8px;
             font-size: 0.85rem;
+            line-height: 1rem;
             // TODO: reduce padding right for smaller screens
             padding: 0 50px 0 5px;
 
@@ -213,6 +210,49 @@ body {
             }
           }
         }
+      }
+    }
+
+    .steps {
+      background: {
+        image: url("../img/steps/bg-bokeh.png");
+        size: cover;
+      }
+      padding: 45px 10% 20px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+
+      .steps-header {
+        @include boldCenteredHeader;
+      }
+
+      .row {
+        margin: 3rem auto 1rem;
+
+        .step {
+          font-size: 0.85rem;
+          line-height: 1.25rem;
+
+          .step-copy {
+            padding: 0.75rem 4.5rem;
+
+            h6 {
+              font-weight: 800;
+            }
+
+            p {
+              margin-top: -5px;
+            }
+          }
+        }
+      }
+
+      button#cta-3 {
+        font-size: 1.15rem;
+        padding: 12px 0;
+        width: 250px;
+        margin-bottom: 4rem;
       }
     }
   }

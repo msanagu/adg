@@ -5,6 +5,9 @@
   font-size: 1.5rem;
   border-radius: 5px;
   cursor: pointer;
+  padding: 10px 0;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  border: none;
   box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.75);
@@ -25,6 +28,12 @@
       font-size: 1.25rem;
     }
   }
+}
+
+@mixin boldCenteredHeader {
+  text-align: center;
+  font-weight: 800;
+  margin: 1rem auto;
 }
 
 // media query mixins
