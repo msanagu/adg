@@ -255,6 +255,34 @@ body {
         margin-bottom: 4rem;
       }
     }
+
+    .testimonials {
+      padding: 45px 10% 20px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+
+      .testimonials-header {
+        color: #30698c;
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .rating {
+        .customer {
+          font-size: 0.85rem;
+          font-weight: 800;
+        }
+      }
+
+      .testimonial-copy {
+        font-size: 0.85rem;
+
+        h6 {
+          font-weight: 800;
+        }
+      }
+    }
   }
 }
 

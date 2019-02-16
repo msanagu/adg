@@ -209,6 +209,22 @@ body {
         padding: 12px 0;
         width: 250px;
         margin-bottom: 4rem; }
+    body main .testimonials {
+      padding: 45px 10% 20px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center; }
+      body main .testimonials .testimonials-header {
+        color: #30698c;
+        text-align: center;
+        font-weight: 800; }
+      body main .testimonials .rating .customer {
+        font-size: 0.85rem;
+        font-weight: 800; }
+      body main .testimonials .testimonial-copy {
+        font-size: 0.85rem; }
+        body main .testimonials .testimonial-copy h6 {
+          font-weight: 800; }
 
 footer {
   color: #777777;
