@@ -119,7 +119,30 @@
 
       .carousel {
         .carousel-header {
-          font-size: 1.25rem;
+          p {
+            font-size: 1.25rem;
+          }
+        }
+
+        .carousel-wrapper {
+          .row {
+            div#bullet-list-2 {
+              .bullets {
+                margin: 0.15rem 0 0 0;
+
+                li {
+                  span {
+                    font-size: 0.95rem;
+                    margin-left: 5px;
+                  }
+
+                  button#cta-2.cta {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
