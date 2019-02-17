@@ -386,16 +386,24 @@
           </h2>
           <p>An nibh moderatius qui!</p>
         </div>
+
         <div class="options">
-          <div class="row">
-            <div class="col-sm-4 option option-1">
+          <div id="product-options" class="row">
+            <div
+              class="col-sm-4 option option-1"
+              onClick="(toggleOption(event))"
+            >
               <p><b>1</b> - Elit 1</p>
               <h5>Commodo</h5>
               <img src="./img/order-options/single-img.png" alt="" />
               <h4>Nulla $55.55 CAD</h4>
               <button class="cta option-cta">Labore Et</button>
             </div>
-            <div class="col-sm-4 option option-2">
+
+            <div
+              class="col-sm-4 option option-2"
+              onClick="(toggleOption(event))"
+            >
               <div class="corner-ribbon top-right sticky">Excepteur Due</div>
               <p><b>5</b> - Elit 4</p>
               <h5>Mod Tempor</h5>
@@ -407,7 +415,11 @@
               </p>
               <button class="cta option-cta">Labore Et</button>
             </div>
-            <div class="col-sm-4 option option-3">
+
+            <div
+              class="col-sm-4 option option-3"
+              onClick="(toggleOption(event))"
+            >
               <div class="corner-ribbon top-right sticky">Duis Aute</div>
               <p><b>8</b> - Elit 8</p>
               <h5 id="headline-3">Cillum Dolore</h5>

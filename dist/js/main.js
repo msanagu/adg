@@ -1,6 +1,7 @@
-// Image Carousel
-const thumbnail = document.querySelectorAll(".img-thumbnail");
-const option = document.querySelector(".option");
+// IMAGE CAROUSEL
+const thumbnail = document.querySelector(".img-thumbnail");
+const productOptions = document.getElementById("product-options");
+const options = document.querySelectorAll(".option");
 
 const changeImage = event => {
   // Compatibility with Internet Explorer 8 and earlier
@@ -16,9 +17,15 @@ const changeImage = event => {
   }
 };
 
-const toggleOption = () => {
-  option.classList.toggle("selected");
-};
+// ORDER OPTIONS
 
-// Listen for option click
-option.addEventListener("click", toggleOption);
+// const price = string.split(' ').filter(function(el) {return el.startsWith('$');});
+
+const toggleOption = event => {
+  // Compatibility with Internet Explorer 8 and earlier
+  event = event || window.event;
+  let selectedOption = event.target;
+
+  // Adds green background, box-shadow, and border when selected
+  selectedOption.classList.toggle("selected");
+};
