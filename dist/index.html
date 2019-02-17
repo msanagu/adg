@@ -391,25 +391,25 @@
           <div id="product-options" class="row">
             <div
               class="col-sm-4 option option-1"
-              onClick="(toggleOption(event))"
+              onClick="(handleOptionClick(event))"
             >
               <p><b>1</b> - Elit 1</p>
-              <h5>Commodo</h5>
+              <h5 class="name">Commodo</h5>
               <img src="./img/order-options/single-img.png" alt="" />
-              <h4>Nulla $55.55 CAD</h4>
+              <h4 class="price">Nulla $55.55 CAD</h4>
               <button class="cta option-cta">Labore Et</button>
             </div>
 
             <div
               class="col-sm-4 option option-2"
-              onClick="(toggleOption(event))"
+              onClick="(handleOptionClick(event))"
             >
               <div class="corner-ribbon top-right sticky">Excepteur Due</div>
               <p><b>5</b> - Elit 4</p>
-              <h5>Mod Tempor</h5>
+              <h5 class="name">Mod Tempor</h5>
               <img src="./img/order-options/set-img.png" alt="" />
               <h5>Excepteur 1, Duis 1</h5>
-              <h4>$220.50 CAD</h4>
+              <h4 class="price">$220.50 CAD</h4>
               <p class="special-price">
                 <span>Orato $440.50 CAD</span> (Nulla $220.00 CAD)
               </p>
@@ -418,14 +418,14 @@
 
             <div
               class="col-sm-4 option option-3"
-              onClick="(toggleOption(event))"
+              onClick="(handleOptionClick(event))"
             >
               <div class="corner-ribbon top-right sticky">Duis Aute</div>
               <p><b>8</b> - Elit 8</p>
-              <h5 id="headline-3">Cillum Dolore</h5>
+              <h5 id="headline-3" class="name">Cillum Dolore</h5>
               <img src="./img/order-options/pack-img.png" alt="" />
               <h5>Excepteur 1, Duis 1</h5>
-              <h4>$220.50 CAD</h4>
+              <h4 class="price">$220.50 CAD</h4>
               <p class="special-price">
                 <span>Orato $440.50 CAD</span> (Nulla $220.00 CAD)
               </p>
@@ -473,6 +473,147 @@
         </div>
       </div>
     </footer>
+
+    <div class="checkout">
+      <div class="row">
+        <div class="form-wrapper col-md-7">
+          <div class="form-header">
+            <h4><b>Complete Your Order</b></h4>
+            <div class="payment-btns">
+              <img src="./img/checkout/paypal-button.png" alt="" />
+              <img src="./img/checkout/amazonpay-button.png" alt="" />
+            </div>
+            <p>Or Pay With Credit Card</p>
+            <img
+              src="./img/checkout/shipping-icon.png"
+              alt="Truck"
+              class="shipping-icon"
+            />
+            <span>Shipping Information</span>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputEmail"
+                placeholder="Email"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputAddress">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="Address"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputAddress2">Apt/Suite</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress2"
+                  placeholder="Apt/Suite (Optional)"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress2"
+                placeholder="City"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputState">Country</label>
+                <select id="inputState" class="form-control">
+                  <option selected>United States</option>
+                  <option>Canada</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputCity">Province</label>
+                <input type="text" class="form-control" id="inputCity" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputZip">Zip Code</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">Phone</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputEmail"
+                placeholder="Phone (Optional)"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">NEXT</button>
+          </form>
+        </div>
+
+        <div class="cart col-md-5">
+          <div class="cart-item">
+            <div class="item-img-border">
+              <img
+                class="item-img"
+                src="./img/checkout/single-set.png"
+                alt="Shopping Cart Item"
+              />
+            </div>
+            <div class="item-info">
+              <p>
+                C&C - Lorem Ipsum
+                <span class="item-price">$54.77 CAD</span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="tax-shipping">
+            <p>
+              Tax
+              <span class="item-price">$0 CAD</span>
+            </p>
+            <p>
+              Shipping
+              <span class="item-price">--</span>
+            </p>
+          </div>
+          <hr />
+          <div class="total">
+            <p>Total <span class="item-price">$0 CAD</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Scripts -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -1,4 +1,6 @@
+// ----------------------------------------------------------
 // IMAGE CAROUSEL
+
 const thumbnail = document.querySelector(".img-thumbnail");
 const productOptions = document.getElementById("product-options");
 const options = document.querySelectorAll(".option");
@@ -17,15 +19,52 @@ const changeImage = event => {
   }
 };
 
+// ----------------------------------------------------------
 // ORDER OPTIONS
 
-// const price = string.split(' ').filter(function(el) {return el.startsWith('$');});
+// Adds green background, box-shadow, and border when selected
+const toggleOption = option => {
+  // Set initial state of option
+  let isSelected = false;
 
-const toggleOption = event => {
-  // Compatibility with Internet Explorer 8 and earlier
+  if (!isSelected) {
+    option.classList.toggle("selected");
+  }
+
+  isSelected = !isSelected;
+
+  extractPrice(option);
+};
+
+// TODO: Fix null error when clicking anything within option div that is an image
+
+const extractPrice = option => {
+  // Find the h4 element that contains the price
+  // Extract dollar amount from element and return as string
+  const priceString = option.querySelector(".price");
+  let price = priceString.innerHTML
+    .toString()
+    .split(" ")
+    .filter(function(el) {
+      return el.startsWith("$");
+    })[0];
+
+  const optionName = option.querySelector(".name");
+  let name = optionName.innerHTML.toString();
+
+  // If option is selected, add its price to the cart
+  if (option.classList.contains("selected")) {
+    console.log(price);
+    sessionStorage.setItem(name, price);
+  } else {
+    sessionStorage.removeItem(name);
+  }
+};
+
+// Toggles style change, extracts price, adds product to cart
+const handleOptionClick = event => {
   event = event || window.event;
-  let selectedOption = event.target;
+  let selectedOption = event.target || event.srcElement;
 
-  // Adds green background, box-shadow, and border when selected
-  selectedOption.classList.toggle("selected");
+  toggleOption(selectedOption);
 };

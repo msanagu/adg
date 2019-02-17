@@ -1,6 +1,5 @@
-// Image Carousel
-
 body {
+  // Image Carousel
   .img-carousel {
     width: 100%;
     height: auto;
@@ -37,6 +36,42 @@ body {
         outline: none;
         border: 2px solid #bbbbbb;
       }
+    }
+  }
+
+  // Payment Form
+  .form-wrapper {
+    padding: 40px;
+    border-top: 0.75px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 0.75px solid rgba(0, 0, 0, 0.25);
+  }
+
+  // Cart
+  .cart {
+    background: #f9f9f9;
+    padding: 40px;
+    border-top: 0.75px solid rgba(0, 0, 0, 0.25);
+    border-left: 0.75px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 0.75px solid rgba(0, 0, 0, 0.25);
+
+    .cart-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: top;
+
+      .item-img-border {
+        width: 65px;
+        height: 65px;
+        border: 0.75px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        float: left;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .item-price {
+      font-weight: 800;
     }
   }
 }

@@ -316,7 +316,11 @@ body {
             &.selected {
               background: #cdf6e6;
               border: 3px solid #1db278;
-              box-shadow: -1px 3px 15px 2px rgba(0, 0, 0, 0.35);
+
+              &:after {
+                content: "";
+                box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+              }
             }
 
             img {
@@ -355,7 +359,7 @@ body {
 
             &.option-2 {
               padding: 30px 0 20px;
-              box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.35);
+              box-shadow: 0px 3px 7px -2px rgba(0, 0, 0, 0.35);
               z-index: 2;
 
               .corner-ribbon {
@@ -398,7 +402,6 @@ body {
       background: #ffffea;
       border-top: 1px solid #d4d4cb;
       text-align: center;
-      //   box-shadow: 0 4px 2px -2px gray;
       padding: 20px 0 10px;
 
       h6 {

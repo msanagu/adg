@@ -19,93 +19,144 @@
     <title>Checkout</title>
   </head>
   <body>
-    <form>
-      <div class="form-group">
-        <label for="inputEmail">Email</label>
-        <input
-          type="text"
-          class="form-control"
-          id="inputEmail"
-          placeholder="Email"
-        />
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="firstName">First Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="firstName"
-            placeholder="First Name"
+    <div class="row">
+      <div class="form-wrapper col-md-7">
+        <div class="form-header">
+          <h4><b>Complete Your Order</b></h4>
+          <div class="payment-btns">
+            <img src="./img/checkout/paypal-button.png" alt="" />
+            <img src="./img/checkout/amazonpay-button.png" alt="" />
+          </div>
+          <p>Or Pay With Credit Card</p>
+          <img
+            src="./img/checkout/shipping-icon.png"
+            alt="Truck"
+            class="shipping-icon"
           />
+          <span>Shipping Information</span>
         </div>
-        <div class="form-group col-md-6">
-          <label for="lastName">Last Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="lastName"
-            placeholder="Last Name"
-          />
+        <form>
+          <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputEmail"
+              placeholder="Email"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder="First Name"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder="Last Name"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputAddress">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                placeholder="Address"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputAddress2">Apt/Suite</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress2"
+                placeholder="Apt/Suite (Optional)"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress2">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress2"
+              placeholder="City"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputState">Country</label>
+              <select id="inputState" class="form-control">
+                <option selected>United States</option>
+                <option>Canada</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputCity">Province</label>
+              <input type="text" class="form-control" id="inputCity" />
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputZip">Zip Code</label>
+              <input type="text" class="form-control" id="inputZip" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Phone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputEmail"
+              placeholder="Phone (Optional)"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">NEXT</button>
+        </form>
+      </div>
+
+      <div class="cart col-md-5">
+        <div class="cart-item">
+          <div class="item-img-border">
+            <img
+              class="item-img"
+              src="./img/checkout/single-set.png"
+              alt="Shopping Cart Item"
+            />
+          </div>
+          <div class="item-info">
+            <p>
+              C&C - Lorem Ipsum
+              <span class="item-price">$54.77 CAD</span>
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="tax-shipping">
+          <p>
+            Tax
+            <span class="item-price">$0 CAD</span>
+          </p>
+          <p>
+            Shipping
+            <span class="item-price">--</span>
+          </p>
+        </div>
+        <hr />
+        <div class="total">
+          <p>Total <span class="item-price">$0 CAD</span></p>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputAddress">Address</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputAddress"
-            placeholder="Address"
-          />
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputAddress2">Apt/Suite</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputAddress2"
-            placeholder="Apt/Suite (Optional)"
-          />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress2">City</label>
-        <input
-          type="text"
-          class="form-control"
-          id="inputAddress2"
-          placeholder="City"
-        />
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputState">Country</label>
-          <select id="inputState" class="form-control">
-            <option selected>United States</option>
-            <option>Canada</option>
-          </select>
-        </div>
-        <div class="form-group col-md-3">
-          <label for="inputCity">Province</label>
-          <input type="text" class="form-control" id="inputCity" />
-        </div>
-        <div class="form-group col-md-3">
-          <label for="inputZip">Zip Code</label>
-          <input type="text" class="form-control" id="inputZip" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputEmail">Phone</label>
-        <input
-          type="text"
-          class="form-control"
-          id="inputEmail"
-          placeholder="Phone (Optional)"
-        />
-      </div>
-      <button type="submit" class="btn btn-primary">Zip Code</button>
-    </form>
+    </div>
 
     <!-- Scripts -->
     <script
