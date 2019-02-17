@@ -32,6 +32,34 @@
         }
       }
     }
+
+    main {
+      .steps {
+        .row {
+          .step {
+            .step-copy {
+              padding: 0.75rem 0.5rem;
+            }
+          }
+        }
+      }
+
+      .points {
+        .point-grid {
+          .point {
+            display: block;
+
+            img.point-icon {
+              float: none;
+            }
+
+            .point-copy {
+              padding: 15px 0 0px 10px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -57,6 +85,10 @@
             margin: 0.15rem 0 0 0;
 
             li {
+              img {
+                margin-left: 1rem;
+              }
+
               span {
                 font-size: 0.95rem;
                 margin-left: 5px;
@@ -65,27 +97,6 @@
               button.cta {
                 width: 100%;
               }
-            }
-          }
-        }
-      }
-
-      .img-carousel {
-        img {
-          &#main-image {
-            width: 375px;
-            height: 250px;
-          }
-
-          &.img-thumbnail {
-            padding: 0;
-            height: 55px;
-            width: 55px;
-            margin: 0 5px;
-            object-fit: cover;
-
-            &:nth-child(1) {
-              margin-left: 0;
             }
           }
         }
@@ -119,12 +130,41 @@
 
       .carousel {
         .carousel-header {
+          padding: 0 5px;
+
           p {
             font-size: 1.25rem;
           }
         }
 
         .carousel-wrapper {
+          .img-carousel {
+            margin-bottom: 1.5rem;
+
+            img {
+              &#main-image {
+                width: 320px;
+                height: 200px;
+              }
+            }
+
+            .thumbnails {
+              padding: 20px 0 40px;
+              justify-content: center;
+
+              img.img-thumbnail {
+                padding: 0;
+                height: 51px;
+                width: 51px;
+                margin: 0 5px;
+                object-fit: cover;
+
+                &:nth-child(1) {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
           .row {
             div#bullet-list-2 {
               .bullets {
@@ -143,6 +183,80 @@
               }
             }
           }
+        }
+      }
+
+      .points {
+        .teardrops {
+          width: 100%;
+          height: auto;
+        }
+        .point-grid {
+          margin-bottom: 2rem;
+
+          .row {
+            &.row-2 {
+              margin-top: 0;
+            }
+
+            .point {
+              margin-bottom: 20px;
+
+              img.point-icon {
+                float: left;
+                margin-right: 20px;
+              }
+
+              .point-copy {
+                margin-bottom: 30px;
+                padding: 0 0 0 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .steps {
+        .row {
+          .step {
+            img {
+              margin-bottom: 10px;
+            }
+
+            .step-copy {
+              padding: 0.75rem 1.5rem;
+            }
+          }
+        }
+      }
+
+      .testimonials {
+        .testimonials-header {
+          h2 {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      .order-options {
+        .options {
+          .row {
+            .option {
+              &.option-1 {
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .payment-details {
+        padding: 20px 5% 10px;
+
+        img.badges {
+          width: 100%;
+          height: auto;
         }
       }
     }

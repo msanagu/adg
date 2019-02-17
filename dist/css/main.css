@@ -100,7 +100,8 @@ body {
         margin-bottom: 3.75rem; }
         body .main-jumbotron .bullets li:nth-child(1) {
           margin-top: 0.75rem; }
-        body .main-jumbotron .bullets li span {
+        body .main-jumbotron .bullets li span,
+        body .main-jumbotron .bullets li p {
           margin-left: 10px;
           font-size: 1.25rem; }
       body .main-jumbotron .bullets button#cta-1 {
@@ -148,19 +149,46 @@ body {
   body main .carousel .carousel-wrapper {
     background-image: url("../img/carousel/bg-abstract.png");
     background-size: cover; }
-    body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets {
-      margin-left: 20px; }
-      body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li {
-        margin-bottom: 3.75rem; }
-        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li:nth-child(1) {
-          margin-top: 0.75rem; }
-        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li span {
-          margin-left: 10px;
-          font-size: 1.25rem; }
-      body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets button#cta-2 {
-        font-size: 1.15rem;
-        padding: 12px 0;
-        width: 400px; }
+    body main .carousel .carousel-wrapper h5 {
+      margin: 3rem 0;
+      padding-left: 1.5rem; }
+    body main .carousel .carousel-wrapper .img-carousel {
+      text-align: center;
+      margin: 3rem 0 4rem; }
+      body main .carousel .carousel-wrapper .img-carousel img#main-image {
+        width: 450px;
+        height: 300px; }
+      body main .carousel .carousel-wrapper .img-carousel .thumbnails {
+        justify-content: center; }
+        body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
+          height: 75px;
+          width: 75px; }
+    body main .carousel .carousel-wrapper .row #bullet-list-2 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: top; }
+      body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin-left: 20px; }
+        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper li {
+          margin-bottom: 3.75rem; }
+          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper li:nth-child(1) {
+            margin-top: 0.75rem; }
+          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper li span,
+          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper li p {
+            margin-left: 10px;
+            font-size: 1.25rem; }
+        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper .bullet-copy {
+          text-align: left; }
+        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper button#cta-2 {
+          font-size: 1.15rem;
+          padding: 12px 0;
+          width: 400px; }
   body main .banner {
     background-image: url("../img/banner/bg-leaves.png");
     padding: 45px 10% 20px;
@@ -177,7 +205,7 @@ body {
   body main .points {
     background-image: url("../img/points/bg-dots.png");
     background-size: cover;
-    padding: 45px 10% 20px;
+    padding: 45px 5% 20px;
     margin: 0 auto;
     width: 100%;
     text-align: center; }
@@ -206,7 +234,7 @@ body {
           margin-left: 8px;
           font-size: 0.85rem;
           line-height: 1rem;
-          padding: 0 50px 0 5px; }
+          padding: 0px 7px; }
           body main .points .point-grid .point .point-copy h6 {
             font-weight: 800; }
   body main .steps {
@@ -226,7 +254,7 @@ body {
         font-size: 0.85rem;
         line-height: 1.25rem; }
         body main .steps .row .step .step-copy {
-          padding: 0.75rem 4.5rem; }
+          padding: 0.75rem 2.5rem; }
           body main .steps .row .step .step-copy h6 {
             font-weight: 800; }
           body main .steps .row .step .step-copy p {
@@ -399,7 +427,15 @@ footer {
   body .jumbotron .carousel {
     padding: 10%; }
     body .jumbotron .carousel .carousel-header {
-      font-size: 1.75rem; } }
+      font-size: 1.75rem; }
+  body main .steps .row .step .step-copy {
+    padding: 0.75rem 0.5rem; }
+  body main .points .point-grid .point {
+    display: block; }
+    body main .points .point-grid .point img.point-icon {
+      float: none; }
+    body main .points .point-grid .point .point-copy {
+      padding: 15px 0 0px 10px; } }
 
 @media screen and (max-width: 480px) {
   body .jumbotron .jumbotron-header {
@@ -411,30 +447,39 @@ footer {
       font-size: 1.25rem; }
   body .jumbotron .row div#bullet-list-1 .bullets {
     margin: 0.15rem 0 0 0; }
+    body .jumbotron .row div#bullet-list-1 .bullets li img {
+      margin-left: 1rem; }
     body .jumbotron .row div#bullet-list-1 .bullets li span {
       font-size: 0.95rem;
       margin-left: 5px; }
     body .jumbotron .row div#bullet-list-1 .bullets li button.cta {
       width: 100%; }
-  body .jumbotron .img-carousel img#main-image {
-    width: 375px;
-    height: 250px; }
-  body .jumbotron .img-carousel img.img-thumbnail {
-    padding: 0;
-    height: 55px;
-    width: 55px;
-    margin: 0 5px;
-    object-fit: cover; }
-    body .jumbotron .img-carousel img.img-thumbnail:nth-child(1) {
-      margin-left: 0; }
   body main .featured .featured-header p:before {
     width: 25vw; }
   body main .featured .featured-header p:after {
     width: 25vw; }
   body main .featured .featured-logos li.nav-item.col-sm-3 {
     padding: 20px 55px; }
-  body main .carousel .carousel-header p {
-    font-size: 1.25rem; }
+  body main .carousel .carousel-header {
+    padding: 0 5px; }
+    body main .carousel .carousel-header p {
+      font-size: 1.25rem; }
+  body main .carousel .carousel-wrapper .img-carousel {
+    margin-bottom: 1.5rem; }
+    body main .carousel .carousel-wrapper .img-carousel img#main-image {
+      width: 320px;
+      height: 200px; }
+    body main .carousel .carousel-wrapper .img-carousel .thumbnails {
+      padding: 20px 0 40px;
+      justify-content: center; }
+      body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
+        padding: 0;
+        height: 51px;
+        width: 51px;
+        margin: 0 5px;
+        object-fit: cover; }
+        body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail:nth-child(1) {
+          margin-left: 0; }
   body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets {
     margin: 0.15rem 0 0 0; }
     body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li span {
@@ -442,6 +487,35 @@ footer {
       margin-left: 5px; }
     body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li button#cta-2.cta {
       width: 100%; }
+  body main .points .teardrops {
+    width: 100%;
+    height: auto; }
+  body main .points .point-grid {
+    margin-bottom: 2rem; }
+    body main .points .point-grid .row.row-2 {
+      margin-top: 0; }
+    body main .points .point-grid .row .point {
+      margin-bottom: 20px; }
+      body main .points .point-grid .row .point img.point-icon {
+        float: left;
+        margin-right: 20px; }
+      body main .points .point-grid .row .point .point-copy {
+        margin-bottom: 30px;
+        padding: 0 0 0 5px; }
+  body main .steps .row .step img {
+    margin-bottom: 10px; }
+  body main .steps .row .step .step-copy {
+    padding: 0.75rem 1.5rem; }
+  body main .testimonials .testimonials-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem; }
+  body main .order-options .options .row .option.option-1 {
+    margin-bottom: 20px; }
+  body main .payment-details {
+    padding: 20px 5% 10px; }
+    body main .payment-details img.badges {
+      width: 100%;
+      height: auto; }
   footer .dk-grey .footer-menu {
     padding: 25px 5%; }
   footer .dk-grey .copyright p {

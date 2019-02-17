@@ -127,10 +127,48 @@ body {
           size: cover;
         }
 
+        h5 {
+          margin: 3rem 0;
+          padding-left: 1.5rem;
+        }
+
+        .img-carousel {
+          text-align: center;
+          margin: 3rem 0 4rem;
+
+          img#main-image {
+            width: 450px;
+            height: 300px;
+          }
+
+          .thumbnails {
+            justify-content: center;
+
+            img.img-thumbnail {
+              height: 75px;
+              width: 75px;
+            }
+          }
+        }
+
         .row {
           #bullet-list-2 {
-            .bullets {
+            display: flex;
+            justify-content: flex-start;
+            align-items: top;
+
+            .bullet-wrapper {
+              justify-content: center;
+              display: flex;
+              align-items: center;
+              float: left;
+              width: 30px;
+              height: 30px;
               @include bulletList;
+
+              .bullet-copy {
+                text-align: left;
+              }
 
               button#cta-2 {
                 font-size: 1.15rem;
@@ -169,7 +207,7 @@ body {
         image: url("../img/points/bg-dots.png");
         size: cover;
       }
-      padding: 45px 10% 20px;
+      padding: 45px 5% 20px;
       margin: 0 auto;
       width: 100%;
       text-align: center;
@@ -179,7 +217,6 @@ body {
       }
 
       .teardrops {
-        // TODO: media queries for small screens
         margin: 1.5rem auto;
         height: 80px;
         width: auto;
@@ -206,8 +243,7 @@ body {
             margin-left: 8px;
             font-size: 0.85rem;
             line-height: 1rem;
-            // TODO: reduce padding right for smaller screens
-            padding: 0 50px 0 5px;
+            padding: 0px 7px;
 
             h6 {
               font-weight: 800;
@@ -239,7 +275,7 @@ body {
           line-height: 1.25rem;
 
           .step-copy {
-            padding: 0.75rem 4.5rem;
+            padding: 0.75rem 2.5rem;
 
             h6 {
               font-weight: 800;
@@ -426,14 +462,12 @@ footer {
 
     span {
       color: #fff;
-      //   text-decoration: underline;
       line-height: 1.75rem;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
       border-bottom: 1px solid #fff;
     }
   }
   color: #777777;
-  //   height: 215px;
 
   a,
   a:hover {
@@ -455,4 +489,5 @@ footer {
   }
 }
 
+// media queries
 @import "media";
