@@ -150,45 +150,42 @@ body {
     background-image: url("../img/carousel/bg-abstract.png");
     background-size: cover; }
     body main .carousel .carousel-wrapper h5 {
-      margin: 3rem 0;
       padding-left: 1.5rem; }
     body main .carousel .carousel-wrapper .img-carousel {
-      text-align: center;
       margin: 3rem 0 4rem; }
       body main .carousel .carousel-wrapper .img-carousel img#main-image {
         width: 450px;
         height: 300px; }
-      body main .carousel .carousel-wrapper .img-carousel .thumbnails {
-        justify-content: center; }
-        body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
-          height: 75px;
-          width: 75px; }
+      body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
+        height: 75px;
+        width: 75px; }
+    body main .carousel .carousel-wrapper .row .par {
+      padding: 0 7%;
+      margin-top: 3rem; }
     body main .carousel .carousel-wrapper .row #bullet-list-2 {
-      display: flex;
-      justify-content: flex-start;
-      align-items: top; }
-      body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper {
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        float: left;
-        width: 30px;
-        height: 30px;
-        margin-left: 20px; }
-        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper li {
-          margin-bottom: 3.75rem; }
-          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper li:nth-child(1) {
-            margin-top: 0.75rem; }
-          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper li span,
-          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper li p {
-            margin-left: 10px;
-            font-size: 1.25rem; }
-        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper .bullet-copy {
-          text-align: left; }
-        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullet-wrapper button#cta-2 {
-          font-size: 1.15rem;
-          padding: 12px 0;
-          width: 400px; }
+      margin: 2.5rem 0; }
+      body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets {
+        margin: -10px 20px; }
+        body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li {
+          display: flex;
+          align-items: center;
+          padding: 0 40px 0 0; }
+          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li img {
+            height: 30px;
+            width: 30px;
+            margin-right: 15px; }
+          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li#li-cta {
+            display: block;
+            padding: 0;
+            margin-left: 20px; }
+            body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li#li-cta h5 {
+              padding-left: 10px;
+              margin-top: 0.5rem; }
+            body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li#li-cta button#cta-2 {
+              font-size: 1.15rem;
+              padding: 12px 0;
+              width: 375px;
+              margin-top: 0.75rem; }
   body main .banner {
     background-image: url("../img/banner/bg-leaves.png");
     padding: 45px 10% 20px;
@@ -273,12 +270,12 @@ body {
       color: #30698c;
       text-align: center;
       font-weight: 800; }
-    body main .testimonials .rating .customer {
+    body main .testimonials .testimonial .rating .customer {
       font-size: 0.85rem;
       font-weight: 800; }
-    body main .testimonials .testimonial-copy {
+    body main .testimonials .testimonial .testimonial-copy {
       font-size: 0.85rem; }
-      body main .testimonials .testimonial-copy h6 {
+      body main .testimonials .testimonial .testimonial-copy h6 {
         font-weight: 800; }
   body main .order-options {
     background: #ffffea;
@@ -413,21 +410,51 @@ footer {
     footer .dk-grey .footer-menu {
       padding: 25px 32%; }
 
+.checkout {
+  margin-top: 6.5rem; }
+
+@media screen and (min-width: 769px) and (max-width: 2000px) {
+  body main .testimonials .testimonials-header {
+    margin-bottom: 2rem; }
+  body main .testimonials .testimonial {
+    display: flex;
+    margin: 2.5rem 4rem; }
+    body main .testimonials .testimonial.testimonial-2 {
+      flex-direction: row-reverse; }
+    body main .testimonials .testimonial .testimonial-copy {
+      text-align: left;
+      margin-left: 25px;
+      padding-right: 15%; }
+      body main .testimonials .testimonial .testimonial-copy.testimonial-2 {
+        text-align: right;
+        margin: 0 25px 0 0;
+        padding: 0 0 0 20%; } }
+
 @media screen and (max-width: 768px) {
   body .jumbotron .row div#bullet-list-1 {
     margin: 0 auto;
     margin-top: 2rem; }
-    body .jumbotron .row div#bullet-list-1 .bullets li {
-      margin-bottom: 2.25rem; }
-      body .jumbotron .row div#bullet-list-1 .bullets li:nth-child(1) {
-        margin-top: 0.75rem; }
-      body .jumbotron .row div#bullet-list-1 .bullets li span {
-        margin-left: 10px;
-        font-size: 1.25rem; }
-  body .jumbotron .carousel {
-    padding: 10%; }
-    body .jumbotron .carousel .carousel-header {
+    body .jumbotron .row div#bullet-list-1 .bullets-wrapper {
+      text-align: center; }
+      body .jumbotron .row div#bullet-list-1 .bullets-wrapper .bullets {
+        text-align: left; }
+        body .jumbotron .row div#bullet-list-1 .bullets-wrapper .bullets li {
+          margin-bottom: 2.25rem; }
+          body .jumbotron .row div#bullet-list-1 .bullets-wrapper .bullets li:nth-child(1) {
+            margin-top: 0.75rem; }
+          body .jumbotron .row div#bullet-list-1 .bullets-wrapper .bullets li span {
+            margin-left: 10px;
+            font-size: 1.25rem; }
+  body main .carousel .carousel-header {
+    padding: 0 5%; }
+    body main .carousel .carousel-header p {
       font-size: 1.75rem; }
+  body main .carousel .carousel-wrapper .row .img-carousel {
+    text-align: center; }
+    body main .carousel .carousel-wrapper .row .img-carousel .thumbnails {
+      display: block; }
+  body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li#li-cta {
+    text-align: center; }
   body main .steps .row .step .step-copy {
     padding: 0.75rem 0.5rem; }
   body main .points .point-grid .point {
@@ -482,11 +509,15 @@ footer {
           margin-left: 0; }
   body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets {
     margin: 0.15rem 0 0 0; }
+    body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li img {
+      margin-left: 1rem; }
     body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li span {
       font-size: 0.95rem;
       margin-left: 5px; }
-    body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li button#cta-2.cta {
-      width: 100%; }
+    body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li#li-cta {
+      padding: 0; }
+      body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li#li-cta button#cta-2.cta {
+        width: 95%; }
   body main .points .teardrops {
     width: 100%;
     height: auto; }

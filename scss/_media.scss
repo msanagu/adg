@@ -1,3 +1,37 @@
+// laptop (min-width: 769px)
+@include mediaL {
+  body {
+    main {
+      .testimonials {
+        .testimonials-header {
+          margin-bottom: 2rem;
+        }
+
+        .testimonial {
+          display: flex;
+          margin: 2.5rem 4rem;
+
+          &.testimonial-2 {
+            flex-direction: row-reverse;
+          }
+
+          .testimonial-copy {
+            text-align: left;
+            margin-left: 25px;
+            padding-right: 15%;
+
+            &.testimonial-2 {
+              text-align: right;
+              margin: 0 25px 0 0;
+              padding: 0 0 0 20%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // tablet (max-width: 768px)
 @include mediaM {
   body {
@@ -7,33 +41,60 @@
           margin: 0 auto;
           margin-top: 2rem;
 
-          .bullets {
-            li {
-              margin-bottom: 2.25rem;
+          .bullets-wrapper {
+            text-align: center;
 
-              &:nth-child(1) {
-                margin-top: 0.75rem;
+            .bullets {
+              text-align: left;
+
+              li {
+                margin-bottom: 2.25rem;
+
+                &:nth-child(1) {
+                  margin-top: 0.75rem;
+                }
+
+                span {
+                  margin-left: 10px;
+                  font-size: 1.25rem;
+                }
               }
+            }
+          }
+        }
+      }
+    }
 
-              span {
-                margin-left: 10px;
-                font-size: 1.25rem;
+    main {
+      .carousel {
+        .carousel-header {
+          padding: 0 5%;
+          p {
+            font-size: 1.75rem;
+          }
+        }
+
+        .carousel-wrapper {
+          .row {
+            .img-carousel {
+              text-align: center;
+
+              .thumbnails {
+                display: block;
+              }
+            }
+
+            div#bullet-list-2 {
+              .bullets {
+                li#li-cta {
+                  text-align: center;
+                }
               }
             }
           }
         }
       }
 
-      .carousel {
-        padding: 10%;
-
-        .carousel-header {
-          font-size: 1.75rem;
-        }
-      }
-    }
-
-    main {
       .steps {
         .row {
           .step {
@@ -171,13 +232,21 @@
                 margin: 0.15rem 0 0 0;
 
                 li {
+                  img {
+                    margin-left: 1rem;
+                  }
+
                   span {
                     font-size: 0.95rem;
                     margin-left: 5px;
                   }
 
-                  button#cta-2.cta {
-                    width: 100%;
+                  &#li-cta {
+                    padding: 0;
+
+                    button#cta-2.cta {
+                      width: 95%;
+                    }
                   }
                 }
               }

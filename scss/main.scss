@@ -128,12 +128,11 @@ body {
         }
 
         h5 {
-          margin: 3rem 0;
           padding-left: 1.5rem;
         }
 
         .img-carousel {
-          text-align: center;
+          //   text-align: center;
           margin: 3rem 0 4rem;
 
           img#main-image {
@@ -142,7 +141,7 @@ body {
           }
 
           .thumbnails {
-            justify-content: center;
+            // justify-content: center;
 
             img.img-thumbnail {
               height: 75px;
@@ -152,28 +151,45 @@ body {
         }
 
         .row {
+          .par {
+            padding: 0 7%;
+            margin-top: 3rem;
+          }
+
           #bullet-list-2 {
-            display: flex;
-            justify-content: flex-start;
-            align-items: top;
+            margin: 2.5rem 0;
 
-            .bullet-wrapper {
-              justify-content: center;
-              display: flex;
-              align-items: center;
-              float: left;
-              width: 30px;
-              height: 30px;
-              @include bulletList;
+            .bullets {
+              margin: -10px 20px;
 
-              .bullet-copy {
-                text-align: left;
-              }
+              li {
+                display: flex;
+                align-items: center;
+                padding: 0 40px 0 0;
 
-              button#cta-2 {
-                font-size: 1.15rem;
-                padding: 12px 0;
-                width: 400px;
+                img {
+                  height: 30px;
+                  width: 30px;
+                  margin-right: 15px;
+                }
+
+                &#li-cta {
+                  display: block;
+                  padding: 0;
+                  margin-left: 20px;
+
+                  h5 {
+                    padding-left: 10px;
+                    margin-top: 0.5rem;
+                  }
+
+                  button#cta-2 {
+                    font-size: 1.15rem;
+                    padding: 12px 0;
+                    width: 375px;
+                    margin-top: 0.75rem;
+                  }
+                }
               }
             }
           }
@@ -308,18 +324,20 @@ body {
         font-weight: 800;
       }
 
-      .rating {
-        .customer {
-          font-size: 0.85rem;
-          font-weight: 800;
+      .testimonial {
+        .rating {
+          .customer {
+            font-size: 0.85rem;
+            font-weight: 800;
+          }
         }
-      }
 
-      .testimonial-copy {
-        font-size: 0.85rem;
+        .testimonial-copy {
+          font-size: 0.85rem;
 
-        h6 {
-          font-weight: 800;
+          h6 {
+            font-weight: 800;
+          }
         }
       }
     }
@@ -487,6 +505,10 @@ footer {
       padding: 25px 32%;
     }
   }
+}
+
+.checkout {
+  margin-top: 6.5rem;
 }
 
 // media queries
