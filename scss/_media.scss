@@ -39,13 +39,15 @@
       .row {
         div#bullet-list-1 {
           margin: 0 auto;
-          margin-top: 2rem;
+          // margin-top: 2rem;
 
           .bullets-wrapper {
             text-align: center;
 
             .bullets {
               text-align: left;
+              margin-left: 25%;
+              margin-top: 3rem;
 
               li {
                 align-items: center;
@@ -128,6 +130,15 @@
         }
       }
     }
+
+    .form-wrapper {
+      padding: 40px 40px 6rem;
+      .form-header {
+        .pay-with {
+          text-align: left;
+        }
+      }
+    }
   }
 }
 
@@ -154,21 +165,25 @@
 
       .row {
         div#bullet-list-1 {
-          .bullets {
-            margin: 0.15rem 0 0 0;
+          .bullets-wrapper {
+            .bullets {
+              margin: 2rem 0 0 0;
 
-            li {
-              img {
-                margin-left: 1rem;
-              }
+              li {
+                margin-bottom: 2rem;
 
-              span {
-                font-size: 0.95rem;
-                margin-left: 5px;
-              }
+                img {
+                  margin-left: 1rem;
+                }
 
-              button.cta {
-                width: 100%;
+                span {
+                  font-size: 0.95rem;
+                  margin-left: 5px;
+                }
+
+                button.cta {
+                  width: 100%;
+                }
               }
             }
           }
@@ -335,17 +350,17 @@
         }
       }
     }
-  }
 
-  footer {
-    .dk-grey {
-      .footer-menu {
-        padding: 25px 5%;
-      }
+    footer {
+      .dk-grey {
+        .footer-menu {
+          padding: 25px 5%;
+        }
 
-      .copyright {
-        p {
-          font-size: 0.75rem;
+        .copyright {
+          p {
+            font-size: 0.75rem;
+          }
         }
       }
     }

@@ -506,7 +506,9 @@
               <img src="./img/checkout/paypal-button.png" alt="" />
               <img src="./img/checkout/amazonpay-button.png" alt="" />
             </div>
-            <p>Or Pay With Credit Card</p>
+            <div class="pay-with">
+              <p>Or Pay With Credit Card</p>
+            </div>
             <img
               src="./img/checkout/shipping-icon.png"
               alt="Truck"
@@ -514,7 +516,8 @@
             />
             <span>Shipping Information</span>
           </div>
-          <form>
+
+          <form role="form" data-toggle="validator" novalidate="true">
             <div class="form-group">
               <label for="inputEmail">Email</label>
               <input
@@ -627,7 +630,11 @@
                 required
               />
             </div>
-            <button type="submit" class="btn btn-primary">NEXT</button>
+            <div class="submit-wrapper">
+              <button id="form-submit" type="submit">
+                NEXT
+              </button>
+            </div>
           </form>
         </div>
 

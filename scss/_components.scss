@@ -41,74 +41,134 @@ body {
 
   // Payment Form
   .form-wrapper {
-    padding: 40px;
+    padding: 40px 40px 30rem;
     border-top: 0.75px solid rgba(0, 0, 0, 0.25);
-    border-bottom: 0.75px solid rgba(0, 0, 0, 0.25);
+    // border-bottom: 0.75px solid rgba(0, 0, 0, 0.25);
 
-    .form-group {
-      &.filled {
-        position: relative;
-      }
+    .form-header {
+      .payment-btns {
+        margin: 1rem 0;
 
-      ::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: rgba(0, 0, 0, 0.25);
-        padding: 50px 0;
-      }
-      ::-moz-placeholder {
-        /* Firefox 19+ */
-        color: rgba(0, 0, 0, 0.25);
-        padding: 50px 0;
-      }
-      :-ms-input-placeholder {
-        /* IE 10+ */
-        color: rgba(0, 0, 0, 0.25);
-        padding: 50px 0;
-      }
-      :-moz-placeholder {
-        /* Firefox 18- */
-        color: rgba(0, 0, 0, 0.25);
-        padding: 50px 0;
-      }
-
-      label {
-        display: none;
-
-        &.country {
-          display: block;
-          position: absolute;
-          color: #6ec275;
-          font-size: 0.5rem;
-          padding: 2px 0 5px 11px;
+        img {
+          height: 43px;
+          width: auto;
         }
+      }
 
+      .pay-with {
+        text-align: center;
+
+        p {
+          font-size: 0.75rem;
+          color: rgba(0, 0, 0, 0.5);
+
+          &:before {
+            content: "";
+            display: inline-block;
+            margin-right: 10px;
+            width: 20vw;
+            transform: translateY(-4px);
+            border-top: 1px solid #c4c4c4;
+          }
+
+          &:after {
+            content: "";
+            display: inline-block;
+            margin-left: 10px;
+            width: 20vw;
+            transform: translateY(-4px);
+            border-top: 1px solid #c4c4c4;
+          }
+        }
+      }
+    }
+
+    form {
+      margin-top: 0.75rem;
+
+      .form-group {
         &.filled {
-          display: block;
-          position: absolute;
-          color: #6ec275;
-          font-size: 0.5rem;
-          padding: 2px 0 5px 11px;
-        }
-      }
-
-      .form-control {
-        &.filled {
-          border: 1.4px solid #6ec275;
-          padding: 20px 10px 10px;
+          position: relative;
         }
 
-        &#inputCountry {
-          padding: 10px 0 0 5px;
+        ::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: rgba(0, 0, 0, 0.25);
+          padding: 50px 0;
+        }
+        ::-moz-placeholder {
+          /* Firefox 19+ */
+          color: rgba(0, 0, 0, 0.25);
+          padding: 50px 0;
+        }
+        :-ms-input-placeholder {
+          /* IE 10+ */
+          color: rgba(0, 0, 0, 0.25);
+          padding: 50px 0;
+        }
+        :-moz-placeholder {
+          /* Firefox 18- */
+          color: rgba(0, 0, 0, 0.25);
+          padding: 50px 0;
         }
 
-        input {
-          padding-top: 20px;
-          padding-bottom: 20px;
+        label {
+          display: none;
+
+          &.country {
+            display: block;
+            position: absolute;
+            color: #6ec275;
+            font-size: 0.5rem;
+            padding: 2px 0 5px 11px;
+          }
 
           &.filled {
-            font-size: 1rem;
-            padding: 40px 10px 15px;
+            display: block;
+            position: absolute;
+            color: #6ec275;
+            font-size: 0.5rem;
+            padding: 2px 0 5px 11px;
           }
+        }
+
+        .form-control {
+          &.filled {
+            border: 1.4px solid #6ec275;
+            padding: 20px 10px 10px;
+          }
+
+          &#inputCountry {
+            padding: 10px 0 0 5px;
+
+            option {
+              padding-top: 5px;
+            }
+          }
+
+          input {
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            &.filled {
+              font-size: 1rem;
+              padding: 40px 10px 15px;
+            }
+          }
+        }
+      }
+
+      .submit-wrapper {
+        text-align: center;
+
+        button#form-submit {
+          margin-top: 0.75rem;
+          background: #1ecd95;
+          border-radius: 5px;
+          color: #fff;
+          border: none;
+          padding: 15px;
+          width: 60%;
         }
       }
     }
@@ -120,7 +180,8 @@ body {
     padding: 40px;
     border-top: 0.75px solid rgba(0, 0, 0, 0.25);
     border-left: 0.75px solid rgba(0, 0, 0, 0.25);
-    border-bottom: 0.75px solid rgba(0, 0, 0, 0.25);
+    padding-bottom: 30rem;
+    // border-bottom: 0.75px solid rgba(0, 0, 0, 0.25);
 
     .cart-item {
       display: flex;
