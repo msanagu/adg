@@ -1,4 +1,4 @@
-// laptop (min-width: 769px)
+// laptop (min-width: 1024px)
 @include mediaL {
   body {
     main {
@@ -32,7 +32,7 @@
   }
 }
 
-// tablet (max-width: 768px)
+// tablet (max-width: 1024px)
 @include mediaM {
   body {
     .jumbotron {
@@ -48,6 +48,7 @@
               text-align: left;
 
               li {
+                align-items: center;
                 margin-bottom: 2.25rem;
 
                 &:nth-child(1) {
@@ -78,9 +79,15 @@
           .row {
             .img-carousel {
               text-align: center;
+              padding-left: 0;
 
               .thumbnails {
                 display: block;
+                padding-right: 15px;
+
+                &:nth-child(1) {
+                  margin-left: 0;
+                }
               }
             }
 
@@ -138,6 +145,11 @@
         h4 {
           font-size: 1.25rem;
         }
+      }
+
+      .youtube {
+        padding-left: 0;
+        text-align: center;
       }
 
       .row {
@@ -219,15 +231,17 @@
                 width: 51px;
                 margin: 0 5px;
                 object-fit: cover;
-
-                &:nth-child(1) {
-                  margin-left: 0;
-                }
               }
             }
           }
           .row {
             div#bullet-list-2 {
+              .cta-2-wrapper {
+                button#cta-2.cta {
+                  width: 100%;
+                }
+              }
+
               .bullets {
                 margin: 0.15rem 0 0 0;
 
@@ -240,14 +254,6 @@
                     font-size: 0.95rem;
                     margin-left: 5px;
                   }
-
-                  &#li-cta {
-                    padding: 0;
-
-                    button#cta-2.cta {
-                      width: 95%;
-                    }
-                  }
                 }
               }
             }
@@ -257,7 +263,7 @@
 
       .points {
         .teardrops {
-          width: 100%;
+          width: 95%;
           height: auto;
         }
         .point-grid {

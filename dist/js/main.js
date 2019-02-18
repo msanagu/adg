@@ -61,10 +61,32 @@ const extractPrice = option => {
   }
 };
 
+// ----------------------------------------------------------
+// PAYMENT FORM
+
+const toggleFormClass = input => {
+  console.log("Typing...");
+  input.classList.add("filled");
+  let label = input.previousElementSibling;
+  console.log(label.innerHTML);
+  label.classList.add("filled");
+  label.style.display = label.style.display === "none" ? "none" : "";
+};
+
+// ----------------------------------------------------------
+// EVENT HANDLERS
+
 // Toggles style change, extracts price, adds product to cart
 const handleOptionClick = event => {
   event = event || window.event;
   let selectedOption = event.target || event.srcElement;
-
   toggleOption(selectedOption);
+};
+
+// Handles form input
+const handleFormInput = event => {
+  event = event || window.event;
+  let inputField = event.target || event.srcElement;
+
+  toggleFormClass(inputField);
 };

@@ -28,6 +28,49 @@ body .form-wrapper {
   padding: 40px;
   border-top: 0.75px solid rgba(0, 0, 0, 0.25);
   border-bottom: 0.75px solid rgba(0, 0, 0, 0.25); }
+  body .form-wrapper .form-group.filled {
+    position: relative; }
+  body .form-wrapper .form-group ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(0, 0, 0, 0.25);
+    padding: 50px 0; }
+  body .form-wrapper .form-group ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(0, 0, 0, 0.25);
+    padding: 50px 0; }
+  body .form-wrapper .form-group :-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(0, 0, 0, 0.25);
+    padding: 50px 0; }
+  body .form-wrapper .form-group :-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(0, 0, 0, 0.25);
+    padding: 50px 0; }
+  body .form-wrapper .form-group label {
+    display: none; }
+    body .form-wrapper .form-group label.country {
+      display: block;
+      position: absolute;
+      color: #6ec275;
+      font-size: 0.5rem;
+      padding: 2px 0 5px 11px; }
+    body .form-wrapper .form-group label.filled {
+      display: block;
+      position: absolute;
+      color: #6ec275;
+      font-size: 0.5rem;
+      padding: 2px 0 5px 11px; }
+  body .form-wrapper .form-group .form-control.filled {
+    border: 1.4px solid #6ec275;
+    padding: 20px 10px 10px; }
+  body .form-wrapper .form-group .form-control#inputCountry {
+    padding: 10px 0 0 5px; }
+  body .form-wrapper .form-group .form-control input {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    body .form-wrapper .form-group .form-control input.filled {
+      font-size: 1rem;
+      padding: 40px 10px 15px; }
 
 body .cart {
   background: #f9f9f9;
@@ -88,7 +131,8 @@ body {
     background-size: cover; }
     body .main-jumbotron .youtube {
       width: 100%;
-      height: auto; }
+      height: auto;
+      padding-left: 5%; }
     body .main-jumbotron .jumbotron-header {
       text-align: center;
       margin: -40px 0 45px 0; }
@@ -97,7 +141,11 @@ body {
     body .main-jumbotron .bullets {
       margin-left: 20px; }
       body .main-jumbotron .bullets li {
-        margin-bottom: 3.75rem; }
+        display: flex;
+        margin-bottom: 3rem; }
+        body .main-jumbotron .bullets li img {
+          height: 30px;
+          width: 30px; }
         body .main-jumbotron .bullets li:nth-child(1) {
           margin-top: 0.75rem; }
         body .main-jumbotron .bullets li span,
@@ -152,40 +200,41 @@ body {
     body main .carousel .carousel-wrapper h5 {
       padding-left: 1.5rem; }
     body main .carousel .carousel-wrapper .img-carousel {
-      margin: 3rem 0 4rem; }
+      margin: 3rem 0 4rem;
+      padding-left: 2.5rem; }
       body main .carousel .carousel-wrapper .img-carousel img#main-image {
-        width: 450px;
-        height: 300px; }
+        width: 500px;
+        height: 325px; }
       body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
-        height: 75px;
-        width: 75px; }
+        height: 85px;
+        width: 85px; }
     body main .carousel .carousel-wrapper .row .par {
       padding: 0 7%;
       margin-top: 3rem; }
     body main .carousel .carousel-wrapper .row #bullet-list-2 {
       margin: 2.5rem 0; }
+      body main .carousel .carousel-wrapper .row #bullet-list-2 .cta-2-wrapper {
+        text-align: center; }
+        body main .carousel .carousel-wrapper .row #bullet-list-2 .cta-2-wrapper h5 {
+          padding-left: 10px;
+          margin-top: 1.5rem; }
+        body main .carousel .carousel-wrapper .row #bullet-list-2 .cta-2-wrapper button#cta-2 {
+          font-size: 1.15rem;
+          padding: 12px 0;
+          width: 375px;
+          margin-top: 0.75rem; }
       body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets {
         margin: -10px 20px; }
         body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li {
+          margin-bottom: 10px;
           display: flex;
-          align-items: center;
+          align-items: top;
           padding: 0 40px 0 0; }
           body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li img {
             height: 30px;
             width: 30px;
-            margin-right: 15px; }
-          body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li#li-cta {
-            display: block;
-            padding: 0;
-            margin-left: 20px; }
-            body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li#li-cta h5 {
-              padding-left: 10px;
-              margin-top: 0.5rem; }
-            body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li#li-cta button#cta-2 {
-              font-size: 1.15rem;
-              padding: 12px 0;
-              width: 375px;
-              margin-top: 0.75rem; }
+            margin-right: 15px;
+            margin-top: 5px; }
   body main .banner {
     background-image: url("../img/banner/bg-leaves.png");
     padding: 45px 10% 20px;
@@ -413,7 +462,7 @@ footer {
 .checkout {
   margin-top: 6.5rem; }
 
-@media screen and (min-width: 769px) and (max-width: 2000px) {
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
   body main .testimonials .testimonials-header {
     margin-bottom: 2rem; }
   body main .testimonials .testimonial {
@@ -430,7 +479,7 @@ footer {
         margin: 0 25px 0 0;
         padding: 0 0 0 20%; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   body .jumbotron .row div#bullet-list-1 {
     margin: 0 auto;
     margin-top: 2rem; }
@@ -439,6 +488,7 @@ footer {
       body .jumbotron .row div#bullet-list-1 .bullets-wrapper .bullets {
         text-align: left; }
         body .jumbotron .row div#bullet-list-1 .bullets-wrapper .bullets li {
+          align-items: center;
           margin-bottom: 2.25rem; }
           body .jumbotron .row div#bullet-list-1 .bullets-wrapper .bullets li:nth-child(1) {
             margin-top: 0.75rem; }
@@ -450,9 +500,13 @@ footer {
     body main .carousel .carousel-header p {
       font-size: 1.75rem; }
   body main .carousel .carousel-wrapper .row .img-carousel {
-    text-align: center; }
+    text-align: center;
+    padding-left: 0; }
     body main .carousel .carousel-wrapper .row .img-carousel .thumbnails {
-      display: block; }
+      display: block;
+      padding-right: 15px; }
+      body main .carousel .carousel-wrapper .row .img-carousel .thumbnails:nth-child(1) {
+        margin-left: 0; }
   body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li#li-cta {
     text-align: center; }
   body main .steps .row .step .step-copy {
@@ -472,6 +526,9 @@ footer {
       padding-top: 1rem; }
     body .jumbotron .jumbotron-header h4 {
       font-size: 1.25rem; }
+  body .jumbotron .youtube {
+    padding-left: 0;
+    text-align: center; }
   body .jumbotron .row div#bullet-list-1 .bullets {
     margin: 0.15rem 0 0 0; }
     body .jumbotron .row div#bullet-list-1 .bullets li img {
@@ -505,8 +562,8 @@ footer {
         width: 51px;
         margin: 0 5px;
         object-fit: cover; }
-        body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail:nth-child(1) {
-          margin-left: 0; }
+  body main .carousel .carousel-wrapper .row div#bullet-list-2 .cta-2-wrapper button#cta-2.cta {
+    width: 100%; }
   body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets {
     margin: 0.15rem 0 0 0; }
     body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li img {
@@ -514,12 +571,8 @@ footer {
     body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li span {
       font-size: 0.95rem;
       margin-left: 5px; }
-    body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li#li-cta {
-      padding: 0; }
-      body main .carousel .carousel-wrapper .row div#bullet-list-2 .bullets li#li-cta button#cta-2.cta {
-        width: 95%; }
   body main .points .teardrops {
-    width: 100%;
+    width: 95%;
     height: auto; }
   body main .points .point-grid {
     margin-bottom: 2rem; }

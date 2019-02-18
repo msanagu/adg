@@ -17,7 +17,13 @@
   margin-left: 20px;
 
   li {
-    margin-bottom: 3.75rem;
+    display: flex;
+    margin-bottom: 3rem;
+
+    img {
+      height: 30px;
+      width: 30px;
+    }
 
     &:nth-child(1) {
       margin-top: 0.75rem;
@@ -70,13 +76,13 @@
 }
 
 @mixin mediaM {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin mediaL {
-  @media screen and (min-width: 769px) and (max-width: 2000px) {
+  @media screen and (min-width: 1024px) and (max-width: 2000px) {
     @content;
   }
 }
