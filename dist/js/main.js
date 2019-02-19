@@ -34,9 +34,11 @@ const toggleOption = option => {
 
 // TODO: Fix null error when clicking anything within option div that is an image
 
-const populateCart = (products, total) => {
+// TODO: Re-calculate total when product is "deslected"
+
+const logCart = (products, total) => {
   console.log("Products:", products);
-  console.log("Total:", cartSum);
+  console.log("Total:", total);
 };
 
 const extractPrice = option => {
@@ -59,9 +61,10 @@ const extractPrice = option => {
     sessionStorage.setItem(name, priceNum);
     const cartNames = Object.keys(sessionStorage);
     const cartPrices = Object.values(sessionStorage);
-    const products = Object.assign({});
     const cartNums = cartPrices.map(el => parseFloat(el));
-    const total = cartNums.reduce((sum, amount) => sum + amount);
+    const cartSum = cartNums.reduce((sum, amount) => sum + amount);
+    const products = Object.assign({});
+    const shipping = 10.25;
 
     // For every product, associate it with its corresponding price
     cartNames.forEach(name => {
@@ -73,25 +76,17 @@ const extractPrice = option => {
     // Save all praducts as JSON object
     cartItems = Object.assign({ products });
 
-    // Save the total price as JSON
-    cartSum = Object.assign({ total });
+    // Add Shipping
+    let withShipping = cartSum + shipping;
+    console.log(withShipping);
 
-    populateCart(cartItems, cartSum);
+    // Save the total price as JSON
+    total = Object.assign({ withShipping });
+
+    logCart(cartItems, cartSum);
   } else {
     sessionStorage.removeItem(name);
   }
-};
-
-// ----------------------------------------------------------
-// PAYMENT FORM
-
-const toggleFormClass = input => {
-  console.log("Typing...");
-  input.classList.add("filled");
-  let label = input.previousElementSibling;
-  console.log(label.innerHTML);
-  label.classList.add("filled");
-  label.style.display = label.style.display === "none" ? "none" : "";
 };
 
 // ----------------------------------------------------------
@@ -104,10 +99,30 @@ const handleOptionClick = event => {
   toggleOption(selectedOption);
 };
 
+// ----------------------------------------------------------
+// PAYMENT FORM
+
+let shippingInfo = {};
+
+const toggleFormClass = event => {
+  let inputField = event.target || event.srcElement;
+  console.log("Typing...");
+  inputField.classList.add("filled");
+  let label = inputField.previousElementSibling;
+  console.log(label.innerHTML);
+  label.classList.add("filled");
+  label.style.display = label.style.display === "none" ? "none" : "";
+};
+
 // Handles form input
 const handleFormInput = event => {
   event = event || window.event;
-  let inputField = event.target || event.srcElement;
+  let inputValue = event.target.value || event.srcElement;
+  console.log(inputValue);
+  shippingInfo[event.target.name] = inputValue;
+  console.log(shippingInfo);
+};
 
-  toggleFormClass(inputField);
+const handleSubmit = event => {
+  // sumbits form data to JSON
 };

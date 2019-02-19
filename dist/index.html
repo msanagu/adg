@@ -513,116 +513,136 @@
             <span>Shipping Information</span>
           </div>
 
-          <form role="form" data-toggle="validator" novalidate="true">
+          <form
+            id="payment-form"
+            class="form"
+            role="form"
+            data-toggle="validator"
+            novalidate="true"
+          >
             <div class="form-group">
-              <label for="inputEmail">Email</label>
+              <label for="email">Email</label>
               <input
+                name="email"
                 type="text"
                 class="form-control"
-                id="inputEmail"
                 placeholder="Email"
-                onClick="(handleFormInput(event))"
+                onClick="(toggleFormClass(event))"
+                onChange="(handleFormInput(event))"
                 required
               />
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="firstName">First Name</label>
+                <label for="first-name">First Name</label>
                 <input
+                  name="first_name"
                   type="text"
                   class="form-control"
-                  id="firstName"
                   placeholder="First Name"
-                  onClick="(handleFormInput(event))"
+                  onClick="(toggleFormClass(event))"
+                  onChange="(handleFormInput(event))"
                   required
                 />
               </div>
               <div class="form-group col-md-6">
-                <label for="lastName">Last Name</label>
+                <label for="last_name">Last Name</label>
                 <input
+                  name="last_name"
                   type="text"
                   class="form-control"
-                  id="lastName"
                   placeholder="Last Name"
-                  onClick="(handleFormInput(event))"
+                  onClick="(toggleFormClass(event))"
+                  onChange="(handleFormInput(event))"
                   required
                 />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputAddress">Address</label>
+                <label for="address1">Address</label>
                 <input
+                  name="address1"
                   type="text"
                   class="form-control"
-                  id="inputAddress"
                   placeholder="Address"
-                  onClick="(handleFormInput(event))"
+                  onClick="(toggleFormClass(event))"
+                  onChange="(handleFormInput(event))"
                   required
                 />
               </div>
               <div class="form-group col-md-6">
-                <label for="inputAddress2">Apt/Suite</label>
+                <label for="address2">Apt/Suite</label>
                 <input
+                  name="address2"
                   type="text"
                   class="form-control"
-                  id="inputAddress2"
                   placeholder="Apt/Suite (Optional)"
-                  onClick="(handleFormInput(event))"
+                  onClick="(toggleFormClass(event))"
+                  onChange="(handleFormInput(event))"
                   required
                 />
               </div>
             </div>
             <div class="form-group">
-              <label for="inputAddress2">City</label>
+              <label for="city">City</label>
               <input
+                name="city"
                 type="text"
                 class="form-control"
-                id="inputAddress2"
                 placeholder="City"
-                onClick="(handleFormInput(event))"
+                onClick="(toggleFormClass(event))"
+                onChange="(handleFormInput(event))"
                 required
               />
             </div>
             <div class="form-row">
               <div class="form-group country col-md-6">
-                <label class="country" for="inputCountry">Country</label>
-                <select id="inputCountry" class="form-control country filled">
-                  <option selected>United States</option>
+                <label class="country" for="country">Country</label>
+                <select
+                  name="country"
+                  class="form-control country filled"
+                  onClick="(toggleFormClass(event))"
+                  onChange="(handleFormInput(event))"
+                >
+                  <option>United States</option>
                   <option>Canada</option>
                 </select>
               </div>
               <div class="form-group col-md-3">
-                <label for="inputCity">Province</label>
+                <label for="province">Province</label>
                 <input
+                  name="province"
                   type="text"
                   class="form-control"
-                  id="inputCity"
                   placeholder="Province"
-                  onClick="(handleFormInput(event))"
+                  onClick="(toggleFormClass(event))"
+                  onChange="(handleFormInput(event))"
                   required
                 />
               </div>
               <div class="form-group col-md-3">
-                <label for="inputZip">Zip Code</label>
+                <label for="zip_code">Zip Code</label>
                 <input
+                  name="zip_code"
                   type="text"
                   class="form-control"
-                  id="inputZip"
                   placeholder="Zip Code"
-                  onClick="(handleFormInput(event))"
+                  onClick="(toggleFormClass(event))"
+                  onChange="(handleFormInput(event))"
                   required
                 />
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail">Phone</label>
+              <label for="phone">Phone</label>
               <input
+                name="phone"
                 type="text"
                 class="form-control"
-                id="inputEmail"
                 placeholder="Phone (Optional)"
-                onClick="(handleFormInput(event))"
+                onClick="(toggleFormClass(event))"
+                onChange="(handleFormInput(event))"
                 required
               />
             </div>
