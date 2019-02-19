@@ -1,3 +1,55 @@
+// larger screens (1024px +)
+@include mediaXL {
+  body {
+    .jumbotron {
+      .youtube {
+        padding-left: 8%;
+      }
+    }
+
+    .bullets-wrapper {
+      padding-left: 15%;
+    }
+
+    main {
+      .carousel {
+        .carousel-wrapper {
+          .img-carousel {
+            margin: 3rem 0 4rem 2rem;
+          }
+        }
+      }
+
+      .testimonials {
+        .testimonials-header {
+          margin-bottom: 2rem;
+        }
+
+        .testimonial {
+          display: flex;
+          margin: 2.5rem 4rem;
+
+          &.testimonial-2 {
+            flex-direction: row-reverse;
+          }
+
+          .testimonial-copy {
+            text-align: left;
+            margin-left: 25px;
+            padding-right: 15%;
+
+            &.testimonial-2 {
+              text-align: right;
+              margin: 0 25px 0 0;
+              padding: 0 0 0 20%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // laptop (min-width: 1024px)
 @include mediaL {
   body {
@@ -39,33 +91,6 @@
           }
         }
       }
-
-      .testimonials {
-        .testimonials-header {
-          margin-bottom: 2rem;
-        }
-
-        .testimonial {
-          display: flex;
-          margin: 2.5rem 4rem;
-
-          &.testimonial-2 {
-            flex-direction: row-reverse;
-          }
-
-          .testimonial-copy {
-            text-align: left;
-            margin-left: 25px;
-            padding-right: 15%;
-
-            &.testimonial-2 {
-              text-align: right;
-              margin: 0 25px 0 0;
-              padding: 0 0 0 20%;
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -88,7 +113,6 @@
 
       div#bullet-list-1 {
         margin: 0 auto;
-        // margin-top: 2rem;
 
         .bullets-wrapper {
           text-align: center;
@@ -198,6 +222,7 @@
           font-size: 2rem;
           padding-top: 1rem;
         }
+
         h4 {
           font-size: 1.25rem;
         }
@@ -205,7 +230,6 @@
 
       .youtube {
         img.youtube {
-          // padding-left: 0;
           text-align: center;
         }
       }

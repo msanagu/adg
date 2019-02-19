@@ -42,7 +42,6 @@ body {
     .youtube {
       width: 100%;
       height: auto;
-      // padding-left: 5%;
     }
 
     .jumbotron-header {
@@ -51,6 +50,7 @@ body {
 
       h1 {
         font-weight: 800;
+        margin-top: 2rem;
       }
     }
 
@@ -179,7 +179,7 @@ body {
             }
 
             .bullets {
-              margin: -10px 20px;
+              margin: -10px 20px 0 32px;
 
               li {
                 margin-bottom: 10px;
@@ -316,7 +316,7 @@ body {
     }
 
     .testimonials {
-      padding: 45px 10% 20px;
+      padding: 45px 4% 20px;
       margin: 0 auto;
       width: 100%;
       text-align: center;
@@ -437,7 +437,7 @@ body {
                 @include cornerRibbon;
               }
 
-              #headline-3 {
+              h5.headline-3 {
                 margin-top: 15px;
               }
 

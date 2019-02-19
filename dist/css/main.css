@@ -85,6 +85,8 @@ body .form-wrapper {
         color: #7ac43e;
         font-size: 0.5rem;
         padding: 2px 0 5px 11px; }
+    body .form-wrapper form .form-group .form-control:focus {
+      box-shadow: none; }
     body .form-wrapper form .form-group .form-control.filled {
       border: 1.5px solid #7ac43e;
       padding: 20px 10px 10px; }
@@ -204,30 +206,28 @@ body {
       margin: -40px 0 45px 0; }
       body .main-jumbotron .jumbotron-header h1,
       body .jumbotron .jumbotron-header h1 {
-        font-weight: 800; }
-    body .main-jumbotron .bullets,
-    body .jumbotron .bullets {
-      margin-left: 20px; }
-      body .main-jumbotron .bullets li,
-      body .jumbotron .bullets li {
-        display: flex;
-        margin-bottom: 3rem; }
-        body .main-jumbotron .bullets li img,
-        body .jumbotron .bullets li img {
-          height: 30px;
-          width: 30px; }
-        body .main-jumbotron .bullets li:nth-child(1),
-        body .jumbotron .bullets li:nth-child(1) {
-          margin-top: 0.75rem; }
-        body .main-jumbotron .bullets li span,
-        body .main-jumbotron .bullets li p,
-        body .jumbotron .bullets li span,
-        body .jumbotron .bullets li p {
-          margin-left: 10px;
-          font-size: 1.25rem; }
-      body .main-jumbotron .bullets button#cta-1,
-      body .jumbotron .bullets button#cta-1 {
-        width: 400px; }
+        font-weight: 800;
+        margin-top: 2rem; }
+    body .main-jumbotron .bullets li,
+    body .jumbotron .bullets li {
+      display: flex;
+      margin-bottom: 3rem; }
+      body .main-jumbotron .bullets li img,
+      body .jumbotron .bullets li img {
+        height: 30px;
+        width: 30px; }
+      body .main-jumbotron .bullets li:nth-child(1),
+      body .jumbotron .bullets li:nth-child(1) {
+        margin-top: 0.75rem; }
+      body .main-jumbotron .bullets li span,
+      body .main-jumbotron .bullets li p,
+      body .jumbotron .bullets li span,
+      body .jumbotron .bullets li p {
+        margin-left: 17px;
+        font-size: 1.25rem; }
+    body .main-jumbotron .bullets button#cta-1,
+    body .jumbotron .bullets button#cta-1 {
+      width: 400px; }
   body main .featured {
     background: #ffffea; }
     body main .featured .featured-header {
@@ -299,7 +299,7 @@ body {
           width: 375px;
           margin-top: 0.75rem; }
       body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets {
-        margin: -10px 20px; }
+        margin: -10px 20px 0 32px; }
         body main .carousel .carousel-wrapper .row #bullet-list-2 .bullets li {
           margin-bottom: 10px;
           display: flex;
@@ -386,7 +386,7 @@ body {
       width: 250px;
       margin-bottom: 4rem; }
   body main .testimonials {
-    padding: 45px 10% 20px;
+    padding: 45px 4% 20px;
     margin: 0 auto;
     width: 100%;
     text-align: center; }
@@ -489,7 +489,7 @@ body {
             left: auto;
             transform: rotate(45deg);
             -webkit-transform: rotate(45deg); }
-          body main .order-options .options .row .option.option-3 #headline-3 {
+          body main .order-options .options .row .option.option-3 h5.headline-3 {
             margin-top: 15px; }
           body main .order-options .options .row .option.option-3 img {
             margin-top: -10px;
@@ -537,23 +537,13 @@ footer {
 .checkout {
   margin-top: 6.5rem; }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  body .jumbotron .jumbotron-header h1 {
-    margin-top: 2rem; }
+@media screen and (min-width: 1025px) {
   body .jumbotron .youtube {
-    width: 95%;
-    height: auto;
-    padding-left: 2rem; }
-  body main .carousel .carousel-wrapper .row .par {
-    padding: 0 0 0 30px; }
-  body main .carousel .carousel-wrapper .img-carousel img#main-image {
-    width: 450px;
-    height: 325px; }
-  body main .carousel .carousel-wrapper .img-carousel .thumbnails {
-    display: flex; }
-    body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
-      height: 75px;
-      width: 75px; }
+    padding-left: 8%; }
+  body .bullets-wrapper {
+    padding-left: 15%; }
+  body main .carousel .carousel-wrapper .img-carousel {
+    margin: 3rem 0 4rem 2rem; }
   body main .testimonials .testimonials-header {
     margin-bottom: 2rem; }
   body main .testimonials .testimonial {
@@ -570,7 +560,25 @@ footer {
         margin: 0 25px 0 0;
         padding: 0 0 0 20%; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body .jumbotron .jumbotron-header h1 {
+    margin-top: 2rem; }
+  body .jumbotron .youtube {
+    width: 95%;
+    height: auto;
+    padding-left: 2rem; }
+  body main .carousel .carousel-wrapper .row .par {
+    padding: 0 0 0 30px; }
+  body main .carousel .carousel-wrapper .img-carousel img#main-image {
+    width: 450px;
+    height: 325px; }
+  body main .carousel .carousel-wrapper .img-carousel .thumbnails {
+    display: flex; }
+    body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
+      height: 75px;
+      width: 75px; } }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
   body .jumbotron .jumbotron-header h1 {
     margin-top: 2rem; }
   body .jumbotron .youtube img.youtube {

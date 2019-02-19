@@ -16,7 +16,7 @@ const changeImage = event => {
 };
 
 // ----------------------------------------------------------
-// ORDER OPTIONS
+// ORDER OPTIONS & CART
 
 // Adds green background and border when selected
 const toggleOption = option => {
@@ -34,27 +34,69 @@ const toggleOption = option => {
 
 // TODO: Fix null error when clicking anything within option div that is an image
 
+const populateCart = () => {
+  const cartNames = Object.keys(sessionStorage);
+  const cartPrices = Object.values(sessionStorage);
+
+  // const preShippingTotal = cartPrices
+  console.log(cartNames);
+  console.log(cartPrices);
+
+  const getTotal = (sum, price) => {
+    if (typeof price == "number") {
+      sum + price;
+    }
+  };
+
+  const total = cartPrices.reduce(getTotal);
+  console.log(total);
+
+  // add cart item name and price to cart
+
+  // <div id="cart-item-1">
+  //   <div class="item-img-border">
+  //     <img
+  //       class="item-img"
+  //       src="./img/checkout/single-set.png"
+  //       alt="Shopping Cart Item"
+  //     />
+  //   </div>
+  //   <div class="item-name">
+  //     <p>C&C - Lorem Ipsum</p>
+  //   </div>
+  //   <p class="item-price">$54.77 CAD</p>
+  // </div>;
+};
+
 const extractPrice = option => {
   // Find the h4 element that contains the price
-  // Extract dollar amount from element and return as string
   const priceString = option.querySelector(".price");
-  let price = priceString.innerHTML
+  const price = priceString.innerHTML
     .toString()
     .split(" ")
-    .filter(function(el) {
+    .filter(el => {
       return el.startsWith("$");
     })[0];
 
+  // Extract dollar amount from element and return as string
+  const priceNum = parseFloat(price.match(/\d+\.\d+/g));
   const optionName = option.querySelector(".name");
-  let name = optionName.innerHTML.toString();
+  const name = optionName.innerHTML.toString();
 
-  // If option is selected, add its price to the cart
+  // If option is selected, add its price to the sessionStorage
   if (option.classList.contains("selected")) {
-    console.log(price);
-    sessionStorage.setItem(name, price);
+    sessionStorage.setItem(name, priceNum);
   } else {
     sessionStorage.removeItem(name);
   }
+
+  populateCart();
+};
+
+const calculateTotal = () => {
+  // put all selected products into an array
+  // get all products in sessionStorage and add them
+  // add shipping to get total
 };
 
 // ----------------------------------------------------------

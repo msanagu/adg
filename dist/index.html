@@ -415,9 +415,9 @@
               onClick="(handleOptionClick(event))"
             >
               <p><b>1</b> - Elit 1</p>
-              <h5 class="name">Commodo</h5>
+              <h5 id="product-1" class="name">Commodo</h5>
               <img src="./img/order-options/single-img.png" alt="" />
-              <h4 class="price">Nulla $55.55 CAD</h4>
+              <h4 id="product-1-price" class="price">Nulla $55.55 CAD</h4>
               <button class="cta option-cta">Labore Et</button>
             </div>
 
@@ -427,10 +427,10 @@
             >
               <div class="corner-ribbon top-right sticky">Excepteur Due</div>
               <p><b>5</b> - Elit 4</p>
-              <h5 class="name">Mod Tempor</h5>
+              <h5 id="product-2" class="name">Mod Tempor</h5>
               <img src="./img/order-options/set-img.png" alt="" />
               <h5>Excepteur 1, Duis 1</h5>
-              <h4 class="price">$220.50 CAD</h4>
+              <h4 id="product-2-price" class="price">$220.50 CAD</h4>
               <p class="special-price">
                 <span>Orato $440.50 CAD</span> (Nulla $220.00 CAD)
               </p>
@@ -443,10 +443,10 @@
             >
               <div class="corner-ribbon top-right sticky">Duis Aute</div>
               <p><b>8</b> - Elit 8</p>
-              <h5 id="headline-3" class="name">Cillum Dolore</h5>
+              <h5 id="product-3" class="name headline-3">Cillum Dolore</h5>
               <img src="./img/order-options/pack-img.png" alt="" />
               <h5>Excepteur 1, Duis 1</h5>
-              <h4 class="price">$220.50 CAD</h4>
+              <h4 id="product-3-price" class="price">$220.50 CAD</h4>
               <p class="special-price">
                 <span>Orato $440.50 CAD</span> (Nulla $220.00 CAD)
               </p>
@@ -635,7 +635,39 @@
         </div>
 
         <div class="cart col-md-5">
-          <div class="cart-item">
+          <div class="cart-item" id="cart-item-1">
+            <div class="item-img-border">
+              <img
+                class="item-img"
+                src="./img/checkout/single-set.png"
+                alt="Shopping Cart Item"
+              />
+            </div>
+            <div class="item-name">
+              <p>
+                C&C - Lorem Ipsum
+              </p>
+            </div>
+            <p class="item-price">$54.77 CAD</p>
+          </div>
+          <hr />
+          <div class="cart-item" id="cart-item-2">
+            <div class="item-img-border">
+              <img
+                class="item-img"
+                src="./img/checkout/single-set.png"
+                alt="Shopping Cart Item"
+              />
+            </div>
+            <div class="item-name">
+              <p>
+                C&C - Lorem Ipsum
+              </p>
+            </div>
+            <p class="item-price">$54.77 CAD</p>
+          </div>
+          <hr />
+          <div class="cart-item" id="cart-item-2">
             <div class="item-img-border">
               <img
                 class="item-img"

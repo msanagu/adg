@@ -14,8 +14,6 @@
 }
 
 @mixin bulletList {
-  margin-left: 20px;
-
   li {
     display: flex;
     margin-bottom: 3rem;
@@ -31,7 +29,7 @@
 
     span,
     p {
-      margin-left: 10px;
+      margin-left: 17px;
       font-size: 1.25rem;
     }
   }
@@ -76,7 +74,7 @@
 }
 
 @mixin mediaM {
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
     @content;
   }
 }
@@ -88,13 +86,7 @@
 }
 
 @mixin mediaXL {
-  @media screen and (min-width: 1025px) and (max-width: 2000px) {
-    @content;
-  }
-}
-
-@mixin mediaXL {
-  @media screen and (min-width: 2000px) {
+  @media screen and (min-width: 1025px) {
     @content;
   }
 }

@@ -132,6 +132,10 @@ body {
         }
 
         .form-control {
+          &:focus {
+            box-shadow: none;
+          }
+
           &.filled {
             border: 1.5px solid #7ac43e;
             padding: 20px 10px 10px;
