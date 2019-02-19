@@ -43,7 +43,6 @@ body {
   .form-wrapper {
     padding: 40px 40px 30rem;
     border-top: 0.75px solid rgba(0, 0, 0, 0.25);
-    // border-bottom: 0.75px solid rgba(0, 0, 0, 0.25);
 
     .form-header {
       .payment-btns {
@@ -126,7 +125,7 @@ body {
           &.filled {
             display: block;
             position: absolute;
-            color: #6ec275;
+            color: #7ac43e;
             font-size: 0.5rem;
             padding: 2px 0 5px 11px;
           }
@@ -134,7 +133,7 @@ body {
 
         .form-control {
           &.filled {
-            border: 1.4px solid #6ec275;
+            border: 1.5px solid #7ac43e;
             padding: 20px 10px 10px;
           }
 
@@ -147,8 +146,8 @@ body {
           }
 
           input {
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 24px;
+            padding-bottom: 24px;
 
             &.filled {
               font-size: 1rem;
@@ -181,7 +180,6 @@ body {
     border-top: 0.75px solid rgba(0, 0, 0, 0.25);
     border-left: 0.75px solid rgba(0, 0, 0, 0.25);
     padding-bottom: 30rem;
-    // border-bottom: 0.75px solid rgba(0, 0, 0, 0.25);
 
     .cart-item {
       display: flex;

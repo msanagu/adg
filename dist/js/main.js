@@ -1,10 +1,6 @@
 // ----------------------------------------------------------
 // IMAGE CAROUSEL
 
-const thumbnail = document.querySelector(".img-thumbnail");
-const productOptions = document.getElementById("product-options");
-const options = document.querySelectorAll(".option");
-
 const changeImage = event => {
   // Compatibility with Internet Explorer 8 and earlier
   event = event || window.event;
@@ -22,7 +18,7 @@ const changeImage = event => {
 // ----------------------------------------------------------
 // ORDER OPTIONS
 
-// Adds green background, box-shadow, and border when selected
+// Adds green background and border when selected
 const toggleOption = option => {
   // Set initial state of option
   let isSelected = false;
@@ -31,8 +27,8 @@ const toggleOption = option => {
     option.classList.toggle("selected");
   }
 
+  // Set option state
   isSelected = !isSelected;
-
   extractPrice(option);
 };
 

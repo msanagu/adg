@@ -1,7 +1,45 @@
 // laptop (min-width: 1024px)
 @include mediaL {
   body {
+    .jumbotron {
+      .jumbotron-header {
+        h1 {
+          margin-top: 2rem;
+        }
+      }
+      .youtube {
+        width: 95%;
+        height: auto;
+        padding-left: 2rem;
+      }
+    }
+
     main {
+      .carousel {
+        .carousel-wrapper {
+          .row {
+            .par {
+              padding: 0 0 0 30px;
+            }
+          }
+          .img-carousel {
+            img#main-image {
+              width: 450px;
+              height: 325px;
+            }
+
+            .thumbnails {
+              display: flex;
+
+              img.img-thumbnail {
+                height: 75px;
+                width: 75px;
+              }
+            }
+          }
+        }
+      }
+
       .testimonials {
         .testimonials-header {
           margin-bottom: 2rem;
@@ -32,35 +70,45 @@
   }
 }
 
-// tablet (max-width: 1024px)
+// tablet (max-width: 768px)
 @include mediaM {
   body {
     .jumbotron {
-      .row {
-        div#bullet-list-1 {
-          margin: 0 auto;
-          // margin-top: 2rem;
+      .jumbotron-header {
+        h1 {
+          margin-top: 2rem;
+        }
+      }
 
-          .bullets-wrapper {
-            text-align: center;
+      .youtube {
+        img.youtube {
+          padding: 0 5%;
+        }
+      }
 
-            .bullets {
-              text-align: left;
-              margin-left: 25%;
-              margin-top: 3rem;
+      div#bullet-list-1 {
+        margin: 0 auto;
+        // margin-top: 2rem;
 
-              li {
-                align-items: center;
-                margin-bottom: 2.25rem;
+        .bullets-wrapper {
+          text-align: center;
 
-                &:nth-child(1) {
-                  margin-top: 0.75rem;
-                }
+          .bullets {
+            text-align: left;
+            margin-left: 25%;
+            margin-top: 3rem;
 
-                span {
-                  margin-left: 10px;
-                  font-size: 1.25rem;
-                }
+            li {
+              align-items: center;
+              margin-bottom: 2.25rem;
+
+              &:nth-child(1) {
+                margin-top: 0.75rem;
+              }
+
+              span {
+                margin-left: 10px;
+                font-size: 1.25rem;
               }
             }
           }
@@ -78,18 +126,15 @@
         }
 
         .carousel-wrapper {
-          .row {
-            .img-carousel {
-              text-align: center;
-              padding-left: 0;
+          .img-carousel {
+            text-align: center;
+            padding-left: 0;
 
-              .thumbnails {
-                display: block;
-                padding-right: 15px;
+            .thumbnails {
+              padding-right: 15px;
 
-                &:nth-child(1) {
-                  margin-left: 0;
-                }
+              &:nth-child(1) {
+                margin-left: 0;
               }
             }
 
@@ -159,8 +204,10 @@
       }
 
       .youtube {
-        padding-left: 0;
-        text-align: center;
+        img.youtube {
+          // padding-left: 0;
+          text-align: center;
+        }
       }
 
       .row {
@@ -182,7 +229,8 @@
                 }
 
                 button.cta {
-                  width: 100%;
+                  width: 90%;
+                  margin: 0 auto;
                 }
               }
             }
@@ -231,20 +279,23 @@
 
             img {
               &#main-image {
-                width: 320px;
-                height: 200px;
+                width: 100%;
+                height: auto;
+                padding: 0 5%;
               }
             }
 
             .thumbnails {
-              padding: 20px 0 40px;
+              padding-top: 20px;
+              padding-bottom: 40px;
+              padding-right: 0;
               justify-content: center;
 
               img.img-thumbnail {
                 padding: 0;
-                height: 51px;
-                width: 51px;
-                margin: 0 5px;
+                height: 48px;
+                width: 48px;
+                margin: 0 3px;
                 object-fit: cover;
               }
             }
@@ -314,7 +365,7 @@
             }
 
             .step-copy {
-              padding: 0.75rem 1.5rem;
+              padding: 0.75rem 0rem;
             }
           }
         }
