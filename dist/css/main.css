@@ -53,7 +53,7 @@ body .form-wrapper {
         border-top: 1px solid #c4c4c4; }
   body .form-wrapper form {
     margin-top: 0.75rem; }
-    body .form-wrapper form .form-group.filled {
+    body .form-wrapper form .form-group.valid, body .form-wrapper form .form-group.invalid {
       position: relative; }
     body .form-wrapper form .form-group ::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
@@ -79,16 +79,36 @@ body .form-wrapper {
         color: #6ec275;
         font-size: 0.5rem;
         padding: 2px 0 5px 11px; }
-      body .form-wrapper form .form-group label.filled {
+      body .form-wrapper form .form-group label.active {
+        display: block;
+        position: absolute;
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 0.5rem;
+        padding: 2px 0 5px 11px; }
+      body .form-wrapper form .form-group label.valid {
         display: block;
         position: absolute;
         color: #7ac43e;
         font-size: 0.5rem;
         padding: 2px 0 5px 11px; }
+      body .form-wrapper form .form-group label.invalid {
+        display: block;
+        position: absolute;
+        color: #c44e3e;
+        font-size: 0.5rem;
+        padding: 2px 0 5px 11px; }
     body .form-wrapper form .form-group .form-control:focus {
       box-shadow: none; }
-    body .form-wrapper form .form-group .form-control.filled {
+    body .form-wrapper form .form-group .form-control.active {
+      border: 1.5px solid #929292;
+      padding: 20px 10px 10px; }
+      body .form-wrapper form .form-group .form-control.active input:-internal-autofill-selected {
+        background-color: red !important; }
+    body .form-wrapper form .form-group .form-control.valid {
       border: 1.5px solid #7ac43e;
+      padding: 20px 10px 10px; }
+    body .form-wrapper form .form-group .form-control.invalid {
+      border: 1.5px solid #c44e3e;
       padding: 20px 10px 10px; }
     body .form-wrapper form .form-group .form-control.country {
       padding: 10px 0 0 5px; }
@@ -97,7 +117,7 @@ body .form-wrapper {
     body .form-wrapper form .form-group .form-control input {
       padding-top: 24px;
       padding-bottom: 24px; }
-      body .form-wrapper form .form-group .form-control input.filled {
+      body .form-wrapper form .form-group .form-control input.valid {
         font-size: 1rem;
         padding: 40px 10px 15px; }
     body .form-wrapper form .submit-wrapper {
