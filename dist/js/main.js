@@ -24,12 +24,12 @@ const toggleOption = option => {
   let isSelected = false;
 
   if (!isSelected) {
-    option.classList.toggle("selected");
+    option.parentNode.classList.toggle("selected");
   }
 
   // Set option state
   isSelected = !isSelected;
-  extractPrice(option);
+  extractPrice(option.parentNode);
 };
 
 // TODO: Fix null error when clicking anything within option div that is an image

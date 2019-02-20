@@ -41,7 +41,7 @@ body {
 
   // Payment Form
   .form-wrapper {
-    padding: 40px 40px 30rem;
+    padding: 40px 40px 4rem;
     border-top: 0.75px solid rgba(0, 0, 0, 0.25);
 
     .form-header {
@@ -65,7 +65,7 @@ body {
             content: "";
             display: inline-block;
             margin-right: 10px;
-            width: 20vw;
+            width: 18vw;
             transform: translateY(-4px);
             border-top: 1px solid #c4c4c4;
           }
@@ -74,7 +74,7 @@ body {
             content: "";
             display: inline-block;
             margin-left: 10px;
-            width: 20vw;
+            width: 18vw;
             transform: translateY(-4px);
             border-top: 1px solid #c4c4c4;
           }
@@ -141,7 +141,7 @@ body {
             padding: 20px 10px 10px;
           }
 
-          &#inputCountry {
+          &.country {
             padding: 10px 0 0 5px;
 
             option {
@@ -160,6 +160,9 @@ body {
           }
         }
       }
+
+      // TODO: Add font-awesome check for form validation
+      // turn green border red for invalid input
 
       .submit-wrapper {
         text-align: center;
@@ -239,3 +242,5 @@ body {
     }
   }
 }
+
+@import "media";

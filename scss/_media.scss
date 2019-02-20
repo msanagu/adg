@@ -1,4 +1,23 @@
-// larger screens (1024px +)
+// larger than 1441px +
+@include mediaXXL {
+  body {
+    .form-wrapper {
+      padding: 40px 150px 30rem;
+    }
+
+    .cart {
+      padding: 40px 150px;
+
+      .cart-item {
+        .item-name {
+          margin-left: -45%;
+        }
+      }
+    }
+  }
+}
+
+// larger screens (1024px - 1140px)
 @include mediaXL {
   body {
     .jumbotron {
@@ -95,7 +114,7 @@
   }
 }
 
-// tablet (max-width: 768px)
+// (481 - 992px)
 @include mediaM {
   body {
     .jumbotron {
@@ -200,11 +219,34 @@
       }
     }
 
-    .form-wrapper {
-      padding: 40px 40px 6rem;
-      .form-header {
-        .pay-with {
-          text-align: left;
+    .checkout {
+      .form-wrapper {
+        .form-header {
+          .pay-with {
+            text-align: left;
+
+            p {
+              &:before {
+                content: "";
+                width: 15vw;
+              }
+
+              &:after {
+                content: "";
+                width: 15vw;
+              }
+            }
+          }
+        }
+      }
+
+      .cart {
+        padding: 45px 15px;
+
+        .cart-item {
+          .item-name {
+            margin-left: -30px;
+          }
         }
       }
     }
@@ -435,6 +477,60 @@
         .copyright {
           p {
             font-size: 0.75rem;
+          }
+        }
+      }
+    }
+
+    .form-wrapper {
+      .form-header {
+        .pay-with {
+          text-align: left;
+
+          p {
+            &:before {
+              content: "";
+              width: 29vw;
+            }
+
+            &:after {
+              content: "";
+              width: 29vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// smartphones (max-width: 375px)
+@include mediaS {
+  body {
+    .form-wrapper {
+      form {
+        margin-top: 1.75rem;
+      }
+
+      .form-header {
+        text-align: center;
+
+        .payment-btns {
+          img {
+            height: 40px;
+          }
+        }
+        .pay-with {
+          p {
+            &:before {
+              content: "";
+              width: 18vw;
+            }
+
+            &:after {
+              content: "";
+              width: 18vw;
+            }
           }
         }
       }

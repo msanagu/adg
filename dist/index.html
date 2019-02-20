@@ -17,7 +17,7 @@
     />
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <title>Clove & Cactus</title>
   </head>
@@ -410,21 +410,20 @@
 
         <div class="options">
           <div id="product-options" class="row">
-            <div
-              class="col-sm-4 option option-1"
-              onClick="(handleOptionClick(event))"
-            >
+            <div class="col-sm-4 option option-1">
               <p><b>1</b> - Elit 1</p>
               <h5 id="product-1" class="name">Commodo</h5>
               <img src="./img/order-options/single-img.png" alt="" />
               <h4 id="product-1-price" class="price">Nulla $55.55 CAD</h4>
-              <button class="cta option-cta">Labore Et</button>
+              <button
+                class="cta option-cta"
+                onClick="(handleOptionClick(event))"
+              >
+                Add To Cart
+              </button>
             </div>
 
-            <div
-              class="col-sm-4 option option-2"
-              onClick="(handleOptionClick(event))"
-            >
+            <div class="col-sm-4 option option-2">
               <div class="corner-ribbon top-right sticky">Excepteur Due</div>
               <p><b>5</b> - Elit 4</p>
               <h5 id="product-2" class="name">Mod Tempor</h5>
@@ -434,13 +433,15 @@
               <p class="special-price">
                 <span>Orato $440.50 CAD</span> (Nulla $220.00 CAD)
               </p>
-              <button class="cta option-cta">Labore Et</button>
+              <button
+                class="cta option-cta"
+                onClick="(handleOptionClick(event))"
+              >
+                Add To Cart
+              </button>
             </div>
 
-            <div
-              class="col-sm-4 option option-3"
-              onClick="(handleOptionClick(event))"
-            >
+            <div class="col-sm-4 option option-3">
               <div class="corner-ribbon top-right sticky">Duis Aute</div>
               <p><b>8</b> - Elit 8</p>
               <h5 id="product-3" class="name headline-3">Cillum Dolore</h5>
@@ -450,7 +451,12 @@
               <p class="special-price">
                 <span>Orato $440.50 CAD</span> (Nulla $220.00 CAD)
               </p>
-              <button class="cta option-cta">Labore Et</button>
+              <button
+                class="cta option-cta"
+                onClick="(handleOptionClick(event))"
+              >
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
@@ -605,7 +611,7 @@
                   onClick="(toggleFormClass(event))"
                   onChange="(handleFormInput(event))"
                 >
-                  <option>United States</option>
+                  <option selected>United States</option>
                   <option>Canada</option>
                 </select>
               </div>

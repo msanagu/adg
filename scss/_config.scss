@@ -86,7 +86,13 @@
 }
 
 @mixin mediaXL {
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin mediaXXL {
+  @media screen and (min-width: 1441px) {
     @content;
   }
 }
