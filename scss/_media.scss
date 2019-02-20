@@ -536,5 +536,19 @@
         }
       }
     }
+
+    .cart {
+      .cart-item {
+        .item-name {
+          margin-left: 2px;
+        }
+      }
+
+      .cart-summary {
+        .item-name {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }

@@ -520,14 +520,14 @@
           </div>
 
           <form id="payment-form" class="form" role="form" autocomplete="off">
-            <div class="form-group">
+            <div class="form-group" autocomplete="false">
               <label for="email">Email</label>
               <input
                 name="email"
                 type="text"
                 class="form-control"
                 placeholder="Email"
-                onClick="(toggleFormClass(event))"
+                onClick="(toggleActive(event))"
                 onChange="(handleFormInput(event))"
                 required
               />
@@ -540,7 +540,7 @@
                   type="text"
                   class="form-control"
                   placeholder="First Name"
-                  onClick="(toggleFormClass(event))"
+                  onClick="(toggleActive(event))"
                   onChange="(handleFormInput(event))"
                   required
                 />
@@ -552,7 +552,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Last Name"
-                  onClick="(toggleFormClass(event))"
+                  onClick="(toggleActive(event))"
                   onChange="(handleFormInput(event))"
                   required
                 />
@@ -566,7 +566,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Address"
-                  onClick="(toggleFormClass(event))"
+                  onClick="(toggleActive(event))"
                   onChange="(handleFormInput(event))"
                   required
                 />
@@ -578,7 +578,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Apt/Suite (Optional)"
-                  onClick="(toggleFormClass(event))"
+                  onClick="(toggleActive(event))"
                   onChange="(handleFormInput(event))"
                   required
                 />
@@ -591,7 +591,7 @@
                 type="text"
                 class="form-control"
                 placeholder="City"
-                onClick="(toggleFormClass(event))"
+                onClick="(toggleActive(event))"
                 onChange="(handleFormInput(event))"
                 required
               />
@@ -602,7 +602,7 @@
                 <select
                   name="country"
                   class="form-control country filled"
-                  onClick="(toggleFormClass(event))"
+                  onClick="(toggleActive(event))"
                   onChange="(handleFormInput(event))"
                 >
                   <option selected>United States</option>
@@ -616,7 +616,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Province"
-                  onClick="(toggleFormClass(event))"
+                  onClick="(toggleActive(event))"
                   onChange="(handleFormInput(event))"
                   required
                 />
@@ -628,7 +628,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Zip Code"
-                  onClick="(toggleFormClass(event))"
+                  onClick="(toggleActive(event))"
                   onChange="(handleFormInput(event))"
                   required
                 />
@@ -641,7 +641,7 @@
                 type="text"
                 class="form-control"
                 placeholder="Phone (Optional)"
-                onClick="(toggleFormClass(event))"
+                onClick="(toggleActive(event))"
                 onChange="(handleFormInput(event))"
                 required
               />
@@ -651,6 +651,7 @@
                 id="form-submit"
                 type="submit"
                 onClick="(handleSubmit(event))"
+                type="submit"
               >
                 PLACE ORDER
               </button>
@@ -706,20 +707,36 @@
             </div>
             <p class="item-price">$54.77 CAD</p>
           </div>
+
           <hr />
-          <div class="tax-shipping">
-            <p>
-              Tax
-              <span class="item-price">$0 CAD</span>
-            </p>
-            <p>
-              Shipping
-              <span class="item-price">--</span>
+
+          <div class="tax cart-summary">
+            <div class="item-name">
+              <p>
+                Tax
+              </p>
+            </div>
+            <p class="item-price">
+              $0 CAD
             </p>
           </div>
+
+          <div class="shipping cart-summary">
+            <div class="item-name">
+              <p>
+                Shipping
+              </p>
+            </div>
+            <p class="item-price">--</p>
+          </div>
+
           <hr />
-          <div class="total">
-            <p>Total <span class="item-price">$0 CAD</span></p>
+
+          <div class="total cart-summary">
+            <div class="item-name">
+              <p>Total</p>
+            </div>
+            <p class="item-price">$0 CAD</p>
           </div>
         </div>
       </div>

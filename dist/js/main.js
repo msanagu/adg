@@ -83,10 +83,10 @@ const handleOptionClick = event => {
 // ----------------------------------------------------------
 // PAYMENT FORM
 
-let shippingOBJ = {};
 const paymentForm = document.getElementById("payment-form");
+const formFields = paymentForm.elements;
 
-const toggleFormClass = event => {
+const toggleActive = event => {
   let inputField = event.target || event.srcElement;
 
   // If user is currently typing in field, toggle active class
@@ -96,30 +96,72 @@ const toggleFormClass = event => {
   label.style.display = label.style.display === "none" ? "none" : "";
 };
 
-// Handles form input
+// Handles form input, validates each field, and updates shippingOBJ
+let shippingOBJ = {};
+
 const handleFormInput = event => {
   event = event || window.event;
   let inputValue = event.target.value || event.srcElement;
   let inputName = event.target.name;
+
+  // Take input value and place it into data object that will later stringify to JSON
   shippingOBJ[inputName] = inputValue;
 
+  // VALIDATIONS
+
+  // Email (must contain "@" and ".")
   if (!paymentForm.email.value.includes("@")) {
     // paymentForm.email.classList.remove("valid");
     paymentForm.email.classList.add("invalid");
     alert("Please enter a valid email.");
     return false;
+  } else {
+    paymentForm.email.classList.add("valid");
   }
+
+  if (!paymentForm.email.value.includes(".")) {
+    // paymentForm.email.classList.remove("valid");
+    paymentForm.email.classList.add("invalid");
+    alert("Please enter a valid email.");
+    return false;
+  } else {
+    paymentForm.email.classList.add("valid");
+  }
+
+  // First Name (Must contain at least one letter)
+
+  // console.log(paymentForm.first_name.value.length);
+  // if (!paymentForm.first_name.value.length > 0) {
+  //   // paymentForm.email.classList.remove("valid");
+  //   paymentForm.first_name.classList.add("invalid");
+  //   alert("Please enter a name.");
+  //   return false;
+  // } else {
+  //   paymentForm.first_name.classList.add("valid");
+  // }
 };
 
 const handleSubmit = event => {
   event.preventDefault();
 
+  // var elements = document.getElementById("my-form").elements;
+
+  // for (var i = 0, element; (element = elements[i++]); ) {
+  //   if (element.type === "text" && element.value === "")
+  //     console.log("it's an empty textfield");
+  // }
+
   // Form Validation
-  if (paymentForm.email.value == "") {
-    paymentForm.email.classList.remove("valid");
-    paymentForm.email.classList.add("invalid");
-    alert("Please provide your email!");
-    return false;
+
+  const totalFields = formFields.length;
+
+  for (let i = 0; i < totalFields; i++) {
+    if (formFields[i].type === "text" && formFields[i].value === "") {
+      alert("Please fill out all required fields");
+      formFields[i].classList.remove("valid");
+      formFields[i].classList.add("invalid");
+      return false;
+    }
   }
 
   // Loops through sessionStorage to get selected product data
