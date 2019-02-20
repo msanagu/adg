@@ -127,29 +127,10 @@ const handleFormInput = event => {
   } else {
     paymentForm.email.classList.add("valid");
   }
-
-  // First Name (Must contain at least one letter)
-
-  // console.log(paymentForm.first_name.value.length);
-  // if (!paymentForm.first_name.value.length > 0) {
-  //   // paymentForm.email.classList.remove("valid");
-  //   paymentForm.first_name.classList.add("invalid");
-  //   alert("Please enter a name.");
-  //   return false;
-  // } else {
-  //   paymentForm.first_name.classList.add("valid");
-  // }
 };
 
 const handleSubmit = event => {
   event.preventDefault();
-
-  // var elements = document.getElementById("my-form").elements;
-
-  // for (var i = 0, element; (element = elements[i++]); ) {
-  //   if (element.type === "text" && element.value === "")
-  //     console.log("it's an empty textfield");
-  // }
 
   // Form Validation
 
