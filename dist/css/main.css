@@ -325,7 +325,8 @@ body .cart {
       padding-top: 20px;
       padding-bottom: 40px;
       padding-right: 0;
-      justify-content: center; }
+      justify-content: center;
+      text-align: center; }
       body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
         padding: 0;
         height: 48px;
@@ -921,7 +922,8 @@ footer {
       padding-top: 20px;
       padding-bottom: 40px;
       padding-right: 0;
-      justify-content: center; }
+      justify-content: center;
+      text-align: center; }
       body main .carousel .carousel-wrapper .img-carousel .thumbnails img.img-thumbnail {
         padding: 0;
         height: 48px;
