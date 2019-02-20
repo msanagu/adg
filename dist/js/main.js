@@ -36,9 +36,26 @@ const toggleOption = option => {
 
 // TODO: Re-calculate total when product is "deslected"
 
-const logCart = (products, total) => {
-  console.log("Products:", products);
-  console.log("Total:", total);
+let orderOBJ = {
+  cart: {
+    products: "",
+    total: {
+      sub_total: "",
+      shipping: "$10.25",
+      grand_total: ""
+    }
+  }
+};
+
+const logCart = (products, cartSum, withShipping) => {
+  orderOBJ.cart["products"] = products;
+  orderOBJ.cart.total["sub_total"] = `$${cartSum}`;
+  orderOBJ.cart.total["grand_total"] = `$${withShipping}`;
+
+  const cart = Object.assign({}, orderOBJ);
+  const orderJSON = JSON.stringify(cart);
+
+  console.log(orderJSON);
 };
 
 const extractPrice = option => {
@@ -73,17 +90,13 @@ const extractPrice = option => {
       });
     });
 
-    // Save all praducts as JSON object
-    cartItems = Object.assign({ products });
-
     // Add Shipping
     let withShipping = cartSum + shipping;
-    console.log(withShipping);
 
     // Save the total price as JSON
     total = Object.assign({ withShipping });
 
-    logCart(cartItems, cartSum);
+    logCart(products, cartSum, withShipping);
   } else {
     sessionStorage.removeItem(name);
   }
@@ -102,14 +115,12 @@ const handleOptionClick = event => {
 // ----------------------------------------------------------
 // PAYMENT FORM
 
-let shippingInfo = {};
+let shippingOBJ = {};
 
 const toggleFormClass = event => {
   let inputField = event.target || event.srcElement;
-  console.log("Typing...");
   inputField.classList.add("filled");
   let label = inputField.previousElementSibling;
-  console.log(label.innerHTML);
   label.classList.add("filled");
   label.style.display = label.style.display === "none" ? "none" : "";
 };
@@ -118,9 +129,10 @@ const toggleFormClass = event => {
 const handleFormInput = event => {
   event = event || window.event;
   let inputValue = event.target.value || event.srcElement;
-  console.log(inputValue);
-  shippingInfo[event.target.name] = inputValue;
-  console.log(shippingInfo);
+  let inputName = event.target.name;
+  shippingOBJ[inputName] = inputValue;
+  const shippingJSON = JSON.stringify(shippingOBJ);
+  console.log(shippingJSON);
 };
 
 const handleSubmit = event => {
