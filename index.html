@@ -519,13 +519,7 @@
             <span>Shipping Information</span>
           </div>
 
-          <form
-            id="payment-form"
-            class="form"
-            role="form"
-            data-toggle="validator"
-            novalidate="true"
-          >
+          <form id="payment-form" class="form" role="form" autocomplete="off">
             <div class="form-group">
               <label for="email">Email</label>
               <input
@@ -653,8 +647,12 @@
               />
             </div>
             <div class="submit-wrapper">
-              <button id="form-submit" type="submit">
-                NEXT
+              <button
+                id="form-submit"
+                type="submit"
+                onClick="(handleSubmit(event))"
+              >
+                PLACE ORDER
               </button>
             </div>
           </form>
