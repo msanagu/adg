@@ -4,12 +4,11 @@
   "description": "ADG Code Challenge",
   "main": "index.js",
   "homepage": "https://msanagu.github.io/adg",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
+  "dependencies": {},
+  "devDependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
