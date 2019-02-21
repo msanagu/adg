@@ -2,7 +2,10 @@
 // PAYMENT FORM
 
 const paymentForm = document.getElementById("payment-form");
+const lowerForm = document.getElementById("hidden-form");
 let shippingOBJ = {};
+let validFieldCount = 0;
+let formIsValid = false;
 
 const toggleActive = event => {
   let inputField = event.target || event.srcElement;
@@ -25,13 +28,15 @@ const handleFormInput = event => {
     // Change label color
     event.target.previousElementSibling.classList.add("is-invalid");
     // Keep check hidden
-    console.log(event.target.nextElementSibling);
     event.target.nextElementSibling.style.display = "none";
   } else {
     // Change label color
     event.target.previousElementSibling.classList.remove("is-invalid");
     // Show Check
     event.target.nextElementSibling.style.display = "block";
+    // Iterate valid field count
+    validFieldCount++;
+    console.log(validFieldCount);
   }
 
   // Take input value and place it into data object that will later stringify to JSON
@@ -62,15 +67,28 @@ const handleSubmit = event => {
   // Save the total price as JSON
   total = Object.assign({ withShipping });
 
-  // Logs the cart JSON
-  orderOBJ.cart["products"] = products;
-  orderOBJ.cart.total["sub_total"] = `$${cartSum}`;
-  orderOBJ.cart.total["grand_total"] = `$${withShipping}`;
-  const cart = Object.assign({}, orderOBJ);
-  const orderJSON = JSON.stringify(cart);
-  console.log(orderJSON);
+  // Form is ready for submitting if validFieldCount is 9
+  if (validFieldCount === 9) {
+    formIsValid = true;
+  } else {
+    alert("Please complete form.");
+  }
+  console.log(formIsValid);
 
-  // Logs the shipping JSON
-  const finalShippingJSON = JSON.stringify(shippingOBJ);
-  console.log(finalShippingJSON);
+  // If form is valid ------------
+  // Log the cart JSON
+  if (formIsValid) {
+    orderOBJ.cart["products"] = products;
+    orderOBJ.cart.total["sub_total"] = `$${cartSum}`;
+    orderOBJ.cart.total["grand_total"] = `$${withShipping}`;
+    const cart = Object.assign({}, orderOBJ);
+    const orderJSON = JSON.stringify(cart);
+    console.log(orderJSON);
+
+    // Log the shipping JSON
+    const finalShippingJSON = JSON.stringify(shippingOBJ);
+    console.log(finalShippingJSON);
+
+    // Shows hidden part of form
+  }
 };

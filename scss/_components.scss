@@ -205,6 +205,11 @@ body {
           right: 14px;
           color: #7fbe24;
           font-size: 1.1rem;
+
+          &#shipping-check {
+            position: initial;
+            margin-left: 10px;
+          }
         }
 
         &:focus,
@@ -302,6 +307,34 @@ body {
             padding-bottom: 24px;
           }
         }
+
+        &.lower-form {
+          display: flex;
+          align-items: center;
+          border: 0.5px solid #d3dcdf;
+          border-radius: 4px;
+          font-size: 0.8rem;
+
+          .form-header {
+            margin-top: 1.75rem;
+          }
+
+          &.standard-shipping {
+            justify-content: space-between;
+
+            .item-name {
+              margin: 14px 0 0 -47%;
+            }
+
+            .item-price {
+              margin-top: 14px;
+              margin-right: 20px;
+            }
+          }
+
+          &.card-number {
+          }
+        }
       }
 
       .submit-wrapper {
@@ -315,6 +348,12 @@ body {
           border: none;
           padding: 15px;
           width: 60%;
+        }
+      }
+
+      hr {
+        &.lower-form {
+          margin: 2rem 0;
         }
       }
     }

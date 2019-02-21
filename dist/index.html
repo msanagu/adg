@@ -10,14 +10,19 @@
 
     <!-- Bootstrap CSS -->
     <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
     />
-    
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
 
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -665,6 +670,49 @@
               />
               <i class="far fa-check-circle" style="display: none"></i>
             </div>
+
+            <div id="hidden-form" class="lower-form" style="display: none">
+              <hr class="lower-form"/>
+              <div class="form-header lower-form">
+                <img
+                  src="./img/checkout/shipping-icon.png"
+                  alt="Truck"
+                  class="shipping-icon"
+                />
+                <span>Shipping Method</span>
+              </div>
+              <div class="form-group lower-form standard-shipping">
+                <i id="shipping-check" class="fas fa-check-circle"></i>
+                <div class="item-name">
+                  <p>
+                    Standard Shipping
+                  </p>
+                </div>
+                <p class="item-price">$8.20 CAD</p>
+              </div>
+              
+              <hr class="lower-form">
+              <div id="payment-infomation" class="form-header">
+                <img
+                  src="./img/checkout/shipping-icon.png"
+                  alt="Truck"
+                  class="shipping-icon"
+                />
+                <div class="payment-information-copy">
+                  <p>Payment Information</p>
+                  <p>All transactions are secure and encrypted.</p>
+                </div>
+              </div>
+              <div class="form-group lower-form card-number">
+                <div class="item-name">
+                  <p>
+                    Card Number
+                  </p>
+                </div>
+                <i id="lock" class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            
             <div class="submit-wrapper">
               <button
                 id="form-submit"
