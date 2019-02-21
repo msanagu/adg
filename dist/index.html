@@ -524,6 +524,7 @@
               <label for="email">Email</label>
               <input
                 name="email"
+                id="email"
                 type="text"
                 class="form-control"
                 placeholder="Email"
@@ -537,6 +538,7 @@
                 <label for="first-name">First Name</label>
                 <input
                   name="first_name"
+                  id="firstName"
                   type="text"
                   class="form-control"
                   placeholder="First Name"
@@ -549,6 +551,7 @@
                 <label for="last_name">Last Name</label>
                 <input
                   name="last_name"
+                  id="lastName"
                   type="text"
                   class="form-control"
                   placeholder="Last Name"
@@ -563,6 +566,7 @@
                 <label for="address1">Address</label>
                 <input
                   name="address1"
+                  id="address1"
                   type="text"
                   class="form-control"
                   placeholder="Address"
@@ -575,6 +579,7 @@
                 <label for="address2">Apt/Suite</label>
                 <input
                   name="address2"
+                  id="address2"
                   type="text"
                   class="form-control"
                   placeholder="Apt/Suite (Optional)"
@@ -588,6 +593,7 @@
               <label for="city">City</label>
               <input
                 name="city"
+                id="city"
                 type="text"
                 class="form-control"
                 placeholder="City"
@@ -602,7 +608,6 @@
                 <select
                   name="country"
                   class="form-control country filled"
-                  onClick="(toggleActive(event))"
                   onChange="(handleFormInput(event))"
                 >
                   <option selected>United States</option>
@@ -613,6 +618,7 @@
                 <label for="province">Province</label>
                 <input
                   name="province"
+                  id="province"
                   type="text"
                   class="form-control"
                   placeholder="Province"
@@ -625,6 +631,7 @@
                 <label for="zip_code">Zip Code</label>
                 <input
                   name="zip_code"
+                  id="zipCode"
                   type="text"
                   class="form-control"
                   placeholder="Zip Code"
@@ -638,12 +645,12 @@
               <label for="phone">Phone</label>
               <input
                 name="phone"
+                id="phone"
                 type="text"
                 class="form-control"
                 placeholder="Phone (Optional)"
                 onClick="(toggleActive(event))"
                 onChange="(handleFormInput(event))"
-                required
               />
             </div>
             <div class="submit-wrapper">
@@ -758,6 +765,10 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/bootstrap-validate.js"></script>
+    <script src="js/validate.js"></script>
   </body>
 </html>
