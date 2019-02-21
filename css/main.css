@@ -149,6 +149,10 @@ body .form-wrapper {
         border-top: 1px solid #c4c4c4; }
   body .form-wrapper form {
     margin-top: 0.75rem; }
+    body .form-wrapper form #hidden-form div#payment-information.form-header {
+      display: flex; }
+      body .form-wrapper form #hidden-form div#payment-information.form-header .payment-information-copy {
+        margin-left: 15px; }
     body .form-wrapper form .form-group {
       position: relative; }
       body .form-wrapper form .form-group .fa-check-circle {
@@ -228,7 +232,8 @@ body .form-wrapper {
         body .form-wrapper form .form-group.lower-form .form-header {
           margin-top: 1.75rem; }
         body .form-wrapper form .form-group.lower-form.standard-shipping {
-          justify-content: space-between; }
+          justify-content: space-between;
+          margin-top: 12px; }
           body .form-wrapper form .form-group.lower-form.standard-shipping .item-name {
             margin: 14px 0 0 -47%; }
           body .form-wrapper form .form-group.lower-form.standard-shipping .item-price {

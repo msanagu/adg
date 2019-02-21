@@ -7,6 +7,11 @@ let shippingOBJ = {};
 let validFields = [];
 let formIsValid = false;
 
+const showHidden = () => {
+  // Shows hidden part of form
+  lowerForm.style.display = "block";
+};
+
 const toggleActive = event => {
   let inputField = event.target || event.srcElement;
 
@@ -69,13 +74,23 @@ const handleSubmit = event => {
   // Save the total price as JSON
   total = Object.assign({ withShipping });
 
-  // Form is ready for submitting if validFieldCount is 9
-  if (validFields.length == 9) {
+  // Form is ready for submitting if all form fields are valid
+  if (validFields.length >= 8) {
     formIsValid = true;
   } else {
     alert("Please complete form.");
   }
   console.log(formIsValid);
+
+  // Form is ready for submitting if cart is not empty
+  if (!cartNames.length) {
+    alert("Your cart is empty.");
+  } else {
+    formIsValid = true;
+    document.getElementById("form-submit").innerHTML = "PLACE ORDER";
+    showHidden();
+    // alert("Thank you for your order!");
+  }
 
   // If form is valid ------------
   // Log the cart JSON
@@ -90,8 +105,5 @@ const handleSubmit = event => {
     // Log the shipping JSON
     const finalShippingJSON = JSON.stringify(shippingOBJ);
     console.log(finalShippingJSON);
-
-    // Shows hidden part of form
-    lowerForm.style.display = "block";
   }
 };
