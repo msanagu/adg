@@ -82,6 +82,7 @@ const handleSubmit = event => {
   total = Object.assign({ withShipping });
 
   // Form is ready for submitting if all form fields are valid
+  // TODO: Fix - invalid field being overlooked because there are 2 optional fields
   if (validFields.length >= 8) {
     formIsValid = true;
   } else {
@@ -97,7 +98,6 @@ const handleSubmit = event => {
     console.log("Cart has items:", cartHasItems);
     document.getElementById("form-submit").innerHTML = "PLACE ORDER";
     showHidden();
-    // alert("Thank you for your order!");
   }
 
   // If form is valid ------------
@@ -108,11 +108,15 @@ const handleSubmit = event => {
     orderOBJ.cart.total["grand_total"] = `$${withShipping}`;
     const cart = Object.assign({}, orderOBJ);
     const orderJSON = JSON.stringify(cart);
-    console.log(orderJSON);
-    alert(`Order Information:" ${orderJSON}`);
-    // Log the shipping JSON
     const finalShippingJSON = JSON.stringify(shippingOBJ);
-    console.log(finalShippingJSON);
-    alert(`Shipping Information: ${finalShippingJSON}`);
+
+    // If form is valid and cart is not empty, log and alert the JSON
+    if (formIsValid && cartHasItems) {
+      console.log(orderJSON);
+      alert(`Order Information:" ${orderJSON}`);
+
+      console.log(finalShippingJSON);
+      alert(`Shipping Information: ${finalShippingJSON}`);
+    }
   }
 };
