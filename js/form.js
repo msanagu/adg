@@ -4,7 +4,7 @@
 const paymentForm = document.getElementById("payment-form");
 const lowerForm = document.getElementById("hidden-form");
 let shippingOBJ = {};
-let validFieldCount = 0;
+let validFields = [];
 let formIsValid = false;
 
 const toggleActive = event => {
@@ -29,14 +29,16 @@ const handleFormInput = event => {
     event.target.previousElementSibling.classList.add("is-invalid");
     // Keep check hidden
     event.target.nextElementSibling.style.display = "none";
+    validFields.pop("valid");
+    console.log(validFields);
   } else {
     // Change label color
     event.target.previousElementSibling.classList.remove("is-invalid");
     // Show Check
     event.target.nextElementSibling.style.display = "block";
     // Iterate valid field count
-    validFieldCount++;
-    console.log(validFieldCount);
+    validFields.push("valid");
+    console.log(validFields);
   }
 
   // Take input value and place it into data object that will later stringify to JSON
@@ -68,7 +70,7 @@ const handleSubmit = event => {
   total = Object.assign({ withShipping });
 
   // Form is ready for submitting if validFieldCount is 9
-  if (validFieldCount === 9) {
+  if (validFields.length == 9) {
     formIsValid = true;
   } else {
     alert("Please complete form.");
@@ -90,5 +92,6 @@ const handleSubmit = event => {
     console.log(finalShippingJSON);
 
     // Shows hidden part of form
+    lowerForm.style.display = "block";
   }
 };
