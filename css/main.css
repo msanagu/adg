@@ -157,6 +157,9 @@ body .form-wrapper {
         right: 14px;
         color: #7fbe24;
         font-size: 1.1rem; }
+        body .form-wrapper form .form-group .fa-check-circle#shipping-check {
+          position: initial;
+          margin-left: 10px; }
       body .form-wrapper form .form-group:focus label, body .form-wrapper form .form-group:active label {
         display: block;
         position: absolute;
@@ -216,6 +219,21 @@ body .form-wrapper {
       body .form-wrapper form .form-group .form-control input {
         padding-top: 24px;
         padding-bottom: 24px; }
+      body .form-wrapper form .form-group.lower-form {
+        display: flex;
+        align-items: center;
+        border: 0.5px solid #d3dcdf;
+        border-radius: 4px;
+        font-size: 0.8rem; }
+        body .form-wrapper form .form-group.lower-form .form-header {
+          margin-top: 1.75rem; }
+        body .form-wrapper form .form-group.lower-form.standard-shipping {
+          justify-content: space-between; }
+          body .form-wrapper form .form-group.lower-form.standard-shipping .item-name {
+            margin: 14px 0 0 -47%; }
+          body .form-wrapper form .form-group.lower-form.standard-shipping .item-price {
+            margin-top: 14px;
+            margin-right: 20px; }
     body .form-wrapper form .submit-wrapper {
       text-align: center; }
       body .form-wrapper form .submit-wrapper button#form-submit {
@@ -226,6 +244,8 @@ body .form-wrapper {
         border: none;
         padding: 15px;
         width: 60%; }
+    body .form-wrapper form hr.lower-form {
+      margin: 2rem 0; }
 
 body .cart {
   background: #f9f9f9;
