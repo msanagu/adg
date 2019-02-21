@@ -86,6 +86,17 @@ body {
       margin-top: 0.75rem;
 
       .form-group {
+        &:focus,
+        &:active {
+          label {
+            display: block;
+            position: absolute;
+            color: #929292;
+            font-size: 0.5rem;
+            padding: 2px 0 5px 11px;
+          }
+        }
+
         &.valid,
         &.invalid {
           position: relative;
@@ -123,20 +134,21 @@ body {
             padding: 2px 0 5px 11px;
           }
 
-          &.active {
+          &.active,
+          &:focus {
             display: block;
             position: absolute;
-            color: rgba(0, 0, 0, 0.25);
+            color: #929292;
             font-size: 0.5rem;
             padding: 2px 0 5px 11px;
-          }
 
-          &.valid {
-            display: block;
-            position: absolute;
-            color: #7ac43e;
-            font-size: 0.5rem;
-            padding: 2px 0 5px 11px;
+            &.valid {
+              display: block;
+              position: absolute;
+              color: #7ac43e;
+              font-size: 0.5rem;
+              padding: 2px 0 5px 11px;
+            }
           }
 
           &.invalid {
@@ -153,13 +165,10 @@ body {
             box-shadow: none;
           }
 
-          &.active {
+          &.active,
+          &:focus {
             border: 1.5px solid #929292;
             padding: 20px 10px 10px;
-
-            input:-internal-autofill-selected {
-              background-color: red !important;
-            }
           }
 
           &.valid {
@@ -183,10 +192,6 @@ body {
           input {
             padding-top: 24px;
             padding-bottom: 24px;
-
-            // &:-webkit-autofill {
-            //   -webkit-box-shadow: 0 0 0px 1000px white inset;
-            // }
 
             &.valid {
               font-size: 1rem;
