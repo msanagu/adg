@@ -152,7 +152,7 @@ body .form-wrapper {
     body .form-wrapper form .form-group:focus label, body .form-wrapper form .form-group:active label {
       display: block;
       position: absolute;
-      color: #929292;
+      color: #7fbe24;
       font-size: 0.5rem;
       padding: 2px 0 5px 11px; }
     body .form-wrapper form .form-group.valid, body .form-wrapper form .form-group.invalid {
@@ -178,13 +178,13 @@ body .form-wrapper {
       body .form-wrapper form .form-group label.country {
         display: block;
         position: absolute;
-        color: #6ec275;
+        color: #7fbe24;
         font-size: 0.5rem;
         padding: 2px 0 5px 11px; }
       body .form-wrapper form .form-group label.active, body .form-wrapper form .form-group label:focus {
         display: block;
         position: absolute;
-        color: #929292;
+        color: #7fbe24;
         font-size: 0.5rem;
         padding: 2px 0 5px 11px; }
         body .form-wrapper form .form-group label.active.valid, body .form-wrapper form .form-group label:focus.valid {
@@ -202,7 +202,7 @@ body .form-wrapper {
     body .form-wrapper form .form-group .form-control:focus {
       box-shadow: none; }
     body .form-wrapper form .form-group .form-control.active, body .form-wrapper form .form-group .form-control:focus {
-      border: 1.5px solid #929292;
+      border: 1.5px solid #7fbe24;
       padding: 20px 10px 10px; }
     body .form-wrapper form .form-group .form-control.valid {
       border: 1.5px solid #7ac43e;

@@ -202,7 +202,7 @@ body {
           label {
             display: block;
             position: absolute;
-            color: #929292;
+            color: #7fbe24;
             font-size: 0.5rem;
             padding: 2px 0 5px 11px;
           }
@@ -240,7 +240,7 @@ body {
           &.country {
             display: block;
             position: absolute;
-            color: #6ec275;
+            color: #7fbe24;
             font-size: 0.5rem;
             padding: 2px 0 5px 11px;
           }
@@ -249,7 +249,7 @@ body {
           &:focus {
             display: block;
             position: absolute;
-            color: #929292;
+            color: #7fbe24;
             font-size: 0.5rem;
             padding: 2px 0 5px 11px;
 
@@ -278,7 +278,7 @@ body {
 
           &.active,
           &:focus {
-            border: 1.5px solid #929292;
+            border: 1.5px solid #7fbe24;
             padding: 20px 10px 10px;
           }
 
