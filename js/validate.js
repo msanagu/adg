@@ -1,6 +1,7 @@
 // Bootstrap Validation
 
 // Email
+
 bootstrapValidate(
   "#email",
   "email:Enter a valid email address.|required:This field is required."

@@ -20,6 +20,20 @@ const handleFormInput = event => {
   let inputValue = event.target.value || event.srcElement;
   let inputName = event.target.name;
 
+  // Change from red/green & show check based on bootstrap validation
+  if (event.target.classList.contains("is-invalid")) {
+    // Change label color
+    event.target.previousElementSibling.classList.add("is-invalid");
+    // Keep check hidden
+    console.log(event.target.nextElementSibling);
+    event.target.nextElementSibling.style.display = "none";
+  } else {
+    // Change label color
+    event.target.previousElementSibling.classList.remove("is-invalid");
+    // Show Check
+    event.target.nextElementSibling.style.display = "block";
+  }
+
   // Take input value and place it into data object that will later stringify to JSON
   shippingOBJ[inputName] = inputValue;
 };
