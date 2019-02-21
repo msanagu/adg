@@ -6,7 +6,7 @@ let orderOBJ = {
     products: "",
     total: {
       sub_total: "",
-      shipping: "$10.25",
+      shipping: "$8.20",
       grand_total: ""
     }
   }
