@@ -195,6 +195,16 @@ body {
 
     form {
       margin-top: 0.75rem;
+      #hidden-form {
+        div#payment-information {
+          &.form-header {
+            display: flex;
+            .payment-information-copy {
+              margin-left: 15px;
+            }
+          }
+        }
+      }
 
       .form-group {
         position: relative;
@@ -321,6 +331,7 @@ body {
 
           &.standard-shipping {
             justify-content: space-between;
+            margin-top: 12px;
 
             .item-name {
               margin: 14px 0 0 -47%;
