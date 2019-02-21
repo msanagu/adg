@@ -197,6 +197,16 @@ body {
       margin-top: 0.75rem;
 
       .form-group {
+        position: relative;
+
+        .fa-check-circle {
+          position: absolute;
+          top: 10px;
+          right: 14px;
+          color: #7fbe24;
+          font-size: 1.1rem;
+        }
+
         &:focus,
         &:active {
           label {
@@ -252,17 +262,9 @@ body {
             color: #7fbe24;
             font-size: 0.5rem;
             padding: 2px 0 5px 11px;
-
-            &.valid {
-              display: block;
-              position: absolute;
-              color: #7ac43e;
-              font-size: 0.5rem;
-              padding: 2px 0 5px 11px;
-            }
           }
 
-          &.invalid {
+          &.is-invalid {
             display: block;
             position: absolute;
             color: #c44e3e;
@@ -282,12 +284,7 @@ body {
             padding: 20px 10px 10px;
           }
 
-          &.valid {
-            border: 1.5px solid #7ac43e;
-            padding: 20px 10px 10px;
-          }
-
-          &.invalid {
+          &.is-invalid {
             border: 1.5px solid #c44e3e;
             padding: 20px 10px 10px;
           }
@@ -303,17 +300,9 @@ body {
           input {
             padding-top: 24px;
             padding-bottom: 24px;
-
-            &.valid {
-              font-size: 1rem;
-              padding: 40px 10px 15px;
-            }
           }
         }
       }
-
-      // TODO: Add font-awesome check for form validation
-      // turn green border red for invalid input
 
       .submit-wrapper {
         text-align: center;
