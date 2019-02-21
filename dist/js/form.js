@@ -6,6 +6,7 @@ const lowerForm = document.getElementById("hidden-form");
 let shippingOBJ = {};
 let validFields = [];
 let formIsValid = false;
+let cartHasItems = false;
 
 const showHidden = () => {
   // Shows hidden part of form
@@ -56,10 +57,16 @@ const handleSubmit = event => {
   // Loops through sessionStorage to get selected product data
   const cartNames = Object.keys(sessionStorage);
   const cartPrices = Object.values(sessionStorage);
-  const cartNums = cartPrices.map(el => parseFloat(el));
-  const cartSum = cartNums.reduce((sum, amount) => sum + amount);
   const products = Object.assign({});
   const shipping = 10.25;
+  let cartNums = [];
+  let cartSum = [];
+
+  // If sessionStorage is not empty, iterate through items
+  if (Object.keys(sessionStorage).length) {
+    cartNums = cartPrices.map(el => parseFloat(el));
+    cartSum = cartNums.reduce((sum, amount) => sum + amount);
+  }
 
   // For every product, associate it with its corresponding price
   cartNames.forEach(name => {
@@ -80,13 +87,14 @@ const handleSubmit = event => {
   } else {
     alert("Please complete form.");
   }
-  console.log(formIsValid);
+  console.log("Form is valid:", formIsValid);
 
   // Form is ready for submitting if cart is not empty
-  if (!cartNames.length) {
+  if (cartPrices.length == 0) {
     alert("Your cart is empty.");
   } else {
-    formIsValid = true;
+    cartHasItems = true;
+    console.log("Cart has items:", cartHasItems);
     document.getElementById("form-submit").innerHTML = "PLACE ORDER";
     showHidden();
     // alert("Thank you for your order!");
@@ -101,9 +109,10 @@ const handleSubmit = event => {
     const cart = Object.assign({}, orderOBJ);
     const orderJSON = JSON.stringify(cart);
     console.log(orderJSON);
-
+    alert(`Order Information:" ${orderJSON}`);
     // Log the shipping JSON
     const finalShippingJSON = JSON.stringify(shippingOBJ);
     console.log(finalShippingJSON);
+    alert(`Shipping Information: ${finalShippingJSON}`);
   }
 };
