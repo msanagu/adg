@@ -679,39 +679,88 @@
                   alt="Truck"
                   class="shipping-icon"
                 />
-                <span>Shipping Method</span>
+                <span id="shipping-method-header">Shipping Method</span>
               </div>
-              <div class="form-group lower-form standard-shipping">
+              <div class="form-group lower-form">
                 <i id="shipping-check" class="fas fa-check-circle"></i>
-                <div class="item-name">
-                  <p>
-                    Standard Shipping
-                  </p>
+                <div class="shipping-info">
+                  <div class="item-name">
+                    <p>
+                      Standard Shipping
+                    </p>
+                  </div>
                 </div>
-                <p class="item-price">$8.20 CAD</p>
+                <p id="shipping-cost" class="item-price">$8.20 CAD</p>
               </div>
 
-              <!-- <hr class="lower-form">
-              <div id="payment-information" class="form-header">
+              <hr class="lower-form">
+
+              <div id="payment-information" class="form-header lower">
                 <div>
                   <img
                     src="./img/checkout/payment-icon.png"
                     alt="Credit Card Icon"
                     class="shipping-icon"
                   />
+                  <span id="billing-address-header">Payment Information</span>
                 </div>
                 <div class="payment-information-copy">
-                  <p>Payment Information</p>
-                  <p>All transactions are secure and encrypted.</p>
+                  <div class="form-row transactions">
+                    <p class="form-group col-md-6">All transactions are secure and encrypted.</p>
+                    <ul class="form-group cards col-md-6">
+                      <li class="credit-card"><img src="./img/checkout/visa.png" alt="Visa"></li>
+                      <li class="credit-card"><img src="./img/checkout/mastercard.png" alt="Mastercard"></li>
+                      <li class="credit-card"><img src="./img/checkout/discover.png" alt="Discover"></li>
+                      <li class="credit-card"><img src="./img/checkout/americanexpress.png" alt="American Express"></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="form-group payment-info">
+                  <input type="text" class="form-control" placeholder="Card Number">
+                  <img src="./img/checkout/secure-icon.png" id="lock-icon" class="lower-form-icon" alt="Lock">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="MM/YY">
+                  </div>
+                  <div class="form-group col-md-6 payment-info">
+                    <input type="text" class="form-control" placeholder="CVC">
+                    <img src="./img/checkout/question-icon.png" id="question-icon" class="lower-form-icon" alt="Question mark">
+                  </div>
                 </div>
               </div>
-              
-              <form id="payment-info-form" class="form" role="form">
-                
-              </form>
 
-              <i id="lock" class="fas fa-check-circle"></i> -->
+              <hr class="lower-form">
+
+              <div class="form-header lower-form">
+                <img
+                  src="./img/checkout/shipping-icon.png"
+                  alt="Mailbox"
+                  class="address-icon"
+                />
+                <span>Billing Address</span>
+              </div>
+
+              <div class="form-group lower-form">
+                <i id="shipping-check" class="fas fa-check-circle"></i>
+                <div class="item-name">
+                  <p>
+                    Same as shipping address
+                  </p>
+                </div>
+              </div>
+              <div id="billing-address" class="form-group lower-form">
+                <img src="./img/checkout/circle.png" alt="Circle" class="unchecked-circle">
+                <div class="item-name">
+                  <p>
+                    Use a different billing address
+                  </p>
+                </div>
+              </div>
             </div>
+
+            <hr class="lower-form">
             
             <div class="submit-wrapper">
               <button
