@@ -97,7 +97,6 @@ const handleSubmit = event => {
     cartHasItems = true;
     console.log("Cart has items:", cartHasItems);
     document.getElementById("form-submit").innerHTML = "PLACE ORDER";
-    showHidden();
   }
 
   // If form is valid ------------
@@ -112,11 +111,13 @@ const handleSubmit = event => {
 
     // If form is valid and cart is not empty, log and alert the JSON
     if (formIsValid && cartHasItems) {
+      showHidden();
+
       console.log(orderJSON);
-      alert(`Order Information:" ${orderJSON}`);
+      alert(`Confirm Order Information:" ${orderJSON}`);
 
       console.log(finalShippingJSON);
-      alert(`Shipping Information: ${finalShippingJSON}`);
+      alert(`Confirm Shipping Information: ${finalShippingJSON}`);
     }
   }
 };

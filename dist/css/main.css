@@ -149,10 +149,6 @@ body .form-wrapper {
         border-top: 1px solid #c4c4c4; }
   body .form-wrapper form {
     margin-top: 0.75rem; }
-    body .form-wrapper form #hidden-form div#payment-information.form-header {
-      display: flex; }
-      body .form-wrapper form #hidden-form div#payment-information.form-header .payment-information-copy {
-        margin-left: 15px; }
     body .form-wrapper form .form-group {
       position: relative; }
       body .form-wrapper form .form-group .fa-check-circle {
@@ -164,6 +160,38 @@ body .form-wrapper {
         body .form-wrapper form .form-group .fa-check-circle#shipping-check {
           position: initial;
           margin-left: 10px; }
+      body .form-wrapper form .form-group.lower-form {
+        position: relative;
+        margin-top: 0.75rem; }
+        body .form-wrapper form .form-group.lower-form #shipping-cost {
+          position: absolute;
+          top: 0;
+          right: 15px; }
+        body .form-wrapper form .form-group.lower-form img {
+          position: initial;
+          margin-left: 10px; }
+        body .form-wrapper form .form-group.lower-form .shipping-info {
+          display: flex; }
+        body .form-wrapper form .form-group.lower-form .item-name,
+        body .form-wrapper form .form-group.lower-form .item-price {
+          transform: translateY(8px);
+          margin-left: 15px; }
+      body .form-wrapper form .form-group.payment-info {
+        position: relative; }
+        body .form-wrapper form .form-group.payment-info img.lower-form-icon {
+          position: absolute; }
+          body .form-wrapper form .form-group.payment-info img.lower-form-icon#lock-icon {
+            top: 6px;
+            right: 8px; }
+          body .form-wrapper form .form-group.payment-info img.lower-form-icon#question-icon {
+            top: 8px;
+            right: 16px; }
+      body .form-wrapper form .form-group.col-md-6 .fa-check-circle, body .form-wrapper form .form-group.col-md-3 .fa-check-circle {
+        position: absolute;
+        top: 10px;
+        right: 18.5px;
+        color: #7fbe24;
+        font-size: 1.1rem; }
       body .form-wrapper form .form-group:focus label, body .form-wrapper form .form-group:active label {
         display: block;
         position: absolute;
@@ -231,14 +259,24 @@ body .form-wrapper {
         font-size: 0.8rem; }
         body .form-wrapper form .form-group.lower-form .form-header {
           margin-top: 1.75rem; }
-        body .form-wrapper form .form-group.lower-form.standard-shipping {
-          justify-content: space-between;
-          margin-top: 12px; }
-          body .form-wrapper form .form-group.lower-form.standard-shipping .item-name {
-            margin: 14px 0 0 -47%; }
-          body .form-wrapper form .form-group.lower-form.standard-shipping .item-price {
-            margin-top: 14px;
-            margin-right: 20px; }
+    body .form-wrapper form #hidden-form div#payment-information.form-header .payment-information-copy {
+      margin-left: 35px; }
+    body .form-wrapper form #hidden-form div#payment-information.form-header .transactions {
+      display: flex; }
+      body .form-wrapper form #hidden-form div#payment-information.form-header .transactions p {
+        font-size: 0.75rem;
+        color: #7a7a7a; }
+      body .form-wrapper form #hidden-form div#payment-information.form-header .transactions ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        margin-bottom: 0.5rem; }
+        body .form-wrapper form #hidden-form div#payment-information.form-header .transactions ul img {
+          width: 35px;
+          height: 22px;
+          margin-left: 4px; }
+    body .form-wrapper form #hidden-form div#billing-address {
+      margin-top: -16px; }
     body .form-wrapper form .submit-wrapper {
       text-align: center; }
       body .form-wrapper form .submit-wrapper button#form-submit {
