@@ -349,6 +349,8 @@ body .cart {
   body .cart .item-price {
     font-weight: 800;
     margin-right: 20px; }
+  body .cart .cart-summary.total .item-price {
+    font-size: 1.1rem; }
   body .cart .cart-summary .item-name {
     margin-left: 0; }
 
@@ -552,6 +554,13 @@ body .cart {
     padding: 25px 5%; }
   body footer .dk-grey .copyright p {
     font-size: 0.75rem; }
+  body .form-wrapper form #hidden-form div#payment-information.form-header .transactions {
+    transform: translateX(-14px); }
+    body .form-wrapper form #hidden-form div#payment-information.form-header .transactions ul {
+      justify-content: center;
+      margin: -10px auto 15px; }
+    body .form-wrapper form #hidden-form div#payment-information.form-header .transactions p {
+      margin-top: 7px; }
   body .form-wrapper .form-header .pay-with {
     text-align: left; }
     body .form-wrapper .form-header .pay-with p:before {
@@ -1062,6 +1071,13 @@ footer {
     padding: 25px 5%; }
   body footer .dk-grey .copyright p {
     font-size: 0.75rem; }
+  body .form-wrapper form #hidden-form div#payment-information.form-header .transactions {
+    transform: translateX(-14px); }
+    body .form-wrapper form #hidden-form div#payment-information.form-header .transactions ul {
+      justify-content: center;
+      margin: -10px auto 15px; }
+    body .form-wrapper form #hidden-form div#payment-information.form-header .transactions p {
+      margin-top: 7px; }
   body .form-wrapper .form-header .pay-with {
     text-align: left; }
     body .form-wrapper .form-header .pay-with p:before {
