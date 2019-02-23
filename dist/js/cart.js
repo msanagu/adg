@@ -64,6 +64,7 @@ const extractProductData = option => {
         <p class="item-price">${price}</p>
       </div>
       <hr />`;
+
     markupArr.push(markup);
     sessionStorage.setItem(name, priceNum);
     option.querySelector(".cta").innerHTML = "Remove From Cart";
@@ -72,11 +73,22 @@ const extractProductData = option => {
     sessionStorage.removeItem(name);
     option.querySelector(".cta").innerHTML = "Add To Cart";
   }
+  const cartPrices = Object.values(sessionStorage);
+  const cartNums = cartPrices.map(el => parseFloat(el));
+  const cartSum = cartNums.reduce((sum, amount) => sum + amount);
+
+  console.log(cartPrices);
+  console.log(cartNums);
+  console.log(cartSum);
 
   // Populate cart-item div with final markup
   const cartWrapper = document.getElementById("cart-items");
-  finalMarkup = markupArr.join();
+  const totalAmount = document.getElementById("total-amount");
+
+  finalMarkup = markupArr.join("");
   cartWrapper.innerHTML = finalMarkup;
+  console.log(totalAmount);
+  totalAmount.innerHTML = `$${cartSum}`;
 };
 
 // ----------------------------------------------------------
