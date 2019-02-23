@@ -129,9 +129,6 @@ const handleSubmit = event => {
       // Changes submit button copy
       document.getElementById("form-submit").innerHTML = "PLACE ORDER";
       submitCount++;
-      console.log(submitCount);
-
-      // Alerts order and shipping JSON if the submit button is hit for the 2nd time
     }
 
     if (submitCount > 1) {

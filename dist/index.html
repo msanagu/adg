@@ -35,6 +35,8 @@
   </header>
 
   <body class="container-fluid">
+
+    <!-- Main Jumbotron With Youtube -->
     <section class="main-jumbotron jumbotron">
       <div class="jumbotron-header">
         <h1>Lorem? Ipsum!</h1>
@@ -70,8 +72,10 @@
         </div>
       </div>
     </section>
-
+    
     <main>
+
+      <!-- Featured Links -->
       <section class="featured">
         <div class="featured-header">
           <p>Duis Aute Irure</p>
@@ -105,6 +109,7 @@
         </ul>
       </section>
 
+      <!-- Image Carousel and Bulleted List -->
       <section class="carousel">
         <div class="carousel-header">
           <p>Eu animal sensibus mei, his ad atqui divertinacia.</p>
@@ -208,6 +213,7 @@
         </div>
       </section>
 
+      <!-- Banner -->
       <section class="banner">
         <div class="banner-header">
           <h5>
@@ -221,6 +227,7 @@
         </div>
       </section>
 
+      <!-- Points -->
       <section class="points">
         <div class="points-header">
           <h2>
@@ -302,6 +309,7 @@
         </div>
       </section>
 
+      <!-- Steps -->
       <section class="steps">
         <div class="steps-header">
           <h2>
@@ -344,6 +352,7 @@
         <button id="cta-3" class="cta">Ut Sea Minim!</button>
       </section>
 
+      <!-- Testimonials -->
       <section class="testimonials">
         <div class="testimonials-header">
           <h2>
@@ -408,6 +417,7 @@
         </div>
       </section>
 
+      <!-- Products -->
       <section class="order-options">
         <div class="order-options-header">
           <h2>
@@ -421,7 +431,7 @@
             <div class="col-sm-4 option option-1">
               <p><b>1</b> - Elit 1</p>
               <h5 id="product-1" class="name">Commodo</h5>
-              <img src="./img/order-options/single-img.png" alt="" />
+              <img src="./img/order-options/single-img.png" id="product-1-img" class="product-image" alt="Product" />
               <h4 id="product-1-price" class="price">Nulla $55.55 CAD</h4>
               <button
                 class="cta option-cta"
@@ -435,7 +445,7 @@
               <div class="corner-ribbon top-right sticky">Excepteur Due</div>
               <p><b>5</b> - Elit 4</p>
               <h5 id="product-2" class="name">Mod Tempor</h5>
-              <img src="./img/order-options/set-img.png" alt="" />
+              <img src="./img/order-options/set-img.png" id="product-1-img" class="product-image" alt="Product" />
               <h5>Excepteur 1, Duis 1</h5>
               <h4 id="product-2-price" class="price">$220.50 CAD</h4>
               <p class="special-price">
@@ -453,7 +463,7 @@
               <div class="corner-ribbon top-right sticky">Duis Aute</div>
               <p><b>8</b> - Elit 8</p>
               <h5 id="product-3" class="name headline-3">Cillum Dolore</h5>
-              <img src="./img/order-options/pack-img.png" alt="" />
+              <img src="./img/order-options/pack-img.png" id="product-2-img" class="product-image" alt="Product" />
               <h5>Excepteur 1, Duis 1</h5>
               <h4 id="product-3-price" class="price">$220.50 CAD</h4>
               <p class="special-price">
@@ -470,6 +480,7 @@
         </div>
       </section>
 
+      <!-- Payment Details -->
       <section class="payment-details">
         <img
           src="./img/order-options/badges.png"
@@ -507,6 +518,7 @@
       </div>
     </footer>
 
+    <!-- Shipping form and Cart -->
     <div class="checkout">
       <div class="row">
         <div class="form-wrapper col-md-7">
@@ -527,6 +539,7 @@
             <span>Shipping Information</span>
           </div>
 
+          <!-- Payment Form -->
           <form id="payment-form" class="form" role="form" autocomplete="off">
             <div class="form-group" autocomplete="false">
               <label for="email">Email</label>
@@ -775,61 +788,9 @@
           </form>
         </div>
 
+        <!-- Cart -->
         <div class="cart col-md-5">
-          <div class="cart-item" id="cart-item-1">
-            <div class="item-img-border">
-              <img
-                class="item-img"
-                src="./img/checkout/single-set.png"
-                alt="Shopping Cart Item"
-              />
-            </div>
-            <div class="item-name">
-              <p>
-                C&C - Lorem Ipsum
-              </p>
-            </div>
-            <p class="item-price">$54.77 CAD</p>
-          </div>
-
-          <hr />
-
-          <div class="cart-item" id="cart-item-2">
-            <div class="item-img-border">
-              <img
-                class="item-img"
-                src="./img/checkout/single-set.png"
-                alt="Shopping Cart Item"
-              />
-            </div>
-            <div class="item-name">
-              <p>
-                C&C - Lorem Ipsum
-              </p>
-            </div>
-            <p class="item-price">$54.77 CAD</p>
-          </div>
-
-          <hr />
-           
-          <div class="cart-item" id="cart-item-2">
-            <div class="item-img-border">
-              <img
-                class="item-img"
-                src="./img/checkout/single-set.png"
-                alt="Shopping Cart Item"
-              />
-            </div>
-            <div class="item-name">
-              <p>
-                C&C - Lorem Ipsum
-              </p>
-            </div>
-            <p class="item-price">$54.77 CAD</p>
-          </div>
-
-          <hr />
-
+          <div id="cart-items"></div>
           <div class="tax cart-summary">
             <div class="item-name">
               <p>

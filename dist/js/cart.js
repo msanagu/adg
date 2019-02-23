@@ -12,6 +12,9 @@ let orderOBJ = {
   }
 };
 
+let markupArr = [];
+let finalMarkup = "";
+
 // Adds green background and border when selected
 const toggleOption = option => {
   // Set initial state of option
@@ -23,10 +26,10 @@ const toggleOption = option => {
 
   // Set option state
   isSelected = !isSelected;
-  extractPrice(option.parentNode);
+  extractProductData(option.parentNode);
 };
 
-const extractPrice = option => {
+const extractProductData = option => {
   // Find the h4 element that contains the price
   const priceString = option.querySelector(".price");
   const price = priceString.innerHTML
@@ -43,12 +46,43 @@ const extractPrice = option => {
 
   // If option is selected, add its price to the sessionStorage
   if (option.classList.contains("selected")) {
+    const productImg = option.querySelector(".product-image");
+    const imagePath = productImg.getAttribute("src");
+    const markup = `<div class="cart-item">
+        <div class="item-img-border">
+          <img
+            class="item-img"
+            src="${imagePath}"
+            alt="Shopping Cart Item"
+          />
+        </div>
+        <div class="item-name">
+          <p>
+            ${name}
+          </p>
+        </div>
+        <p class="item-price">${price}</p>
+      </div>
+      <hr />`;
+    markupArr.push(markup);
+    console.log(markupArr);
+    populateCart(markup);
     sessionStorage.setItem(name, priceNum);
     option.querySelector(".cta").innerHTML = "Remove From Cart";
+    // cartWrapper.innerHTML = markup;
   } else {
+    markupArr.pop();
+    console.log(markupArr);
     sessionStorage.removeItem(name);
     option.querySelector(".cta").innerHTML = "Add To Cart";
   }
+};
+
+const populateCart = product => {
+  const cartWrapper = document.getElementById("cart-items");
+  finalMarkup = finalMarkup + product;
+  cartWrapper.innerHTML = finalMarkup;
+  console.log(finalMarkup);
 };
 
 // ----------------------------------------------------------
