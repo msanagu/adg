@@ -65,24 +65,18 @@ const extractProductData = option => {
       </div>
       <hr />`;
     markupArr.push(markup);
-    console.log(markupArr);
-    populateCart(markup);
     sessionStorage.setItem(name, priceNum);
     option.querySelector(".cta").innerHTML = "Remove From Cart";
-    // cartWrapper.innerHTML = markup;
   } else {
     markupArr.pop();
-    console.log(markupArr);
     sessionStorage.removeItem(name);
     option.querySelector(".cta").innerHTML = "Add To Cart";
   }
-};
 
-const populateCart = product => {
+  // Populate cart-item div with final markup
   const cartWrapper = document.getElementById("cart-items");
-  finalMarkup = finalMarkup + product;
+  finalMarkup = markupArr.join();
   cartWrapper.innerHTML = finalMarkup;
-  console.log(finalMarkup);
 };
 
 // ----------------------------------------------------------
