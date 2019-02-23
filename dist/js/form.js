@@ -120,6 +120,7 @@ const handleSubmit = event => {
 
       // Reveal shipping and total cost
       document.getElementById("shipping-amount").innerHTML = "$8.20 CAD";
+      document.getElementById("sub-total").innerHTML = "Total";
       document.getElementById("total-amount").innerHTML = `$${withShipping}`;
 
       // Reveals lower portion of form
@@ -129,20 +130,13 @@ const handleSubmit = event => {
       // Changes submit button copy
       document.getElementById("form-submit").innerHTML = "PLACE ORDER";
       submitCount++;
-      console.log(submitCount);
-
-      // Alerts order and shipping JSON if the submit button is hit for the 2nd time
     }
 
     if (submitCount > 1) {
       console.log(orderJSON);
-      alert(
-        `Thank you for your order! Here is your order information: ${orderJSON}`
-      );
-
       console.log(finalShippingJSON);
       alert(
-        `Expect standard shipping to arrive in 5-7 business days. ${finalShippingJSON}`
+        `Thank you for your order! Here is your order information: ${orderJSON} Expect standard shipping to arrive in 5-7 business days. ${finalShippingJSON}`
       );
     }
   }
