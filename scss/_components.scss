@@ -499,6 +499,12 @@ body {
     }
 
     .cart-summary {
+      &.total {
+        .item-price {
+          font-size: 1.1rem;
+        }
+      }
+
       .item-name {
         margin-left: 0;
       }

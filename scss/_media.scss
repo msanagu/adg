@@ -491,6 +491,26 @@
     }
 
     .form-wrapper {
+      form {
+        #hidden-form {
+          div#payment-information {
+            &.form-header {
+              .transactions {
+                transform: translateX(-14px);
+
+                ul {
+                  justify-content: center;
+                  margin: -10px auto 15px;
+                }
+                p {
+                  margin-top: 7px;
+                }
+              }
+            }
+          }
+        }
+      }
+
       .form-header {
         .pay-with {
           text-align: left;

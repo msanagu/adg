@@ -3,10 +3,12 @@
 
 const paymentForm = document.getElementById("payment-form");
 const lowerForm = document.getElementById("hidden-form");
+const cartSummary = document.querySelectorAll(".cart-summary");
 let shippingOBJ = {};
 let validFields = [];
 let formIsValid = false;
 let cartHasItems = false;
+let submitCount = 0;
 
 const showHidden = () => {
   // Shows hidden part of form
@@ -36,7 +38,7 @@ const handleFormInput = event => {
     // Keep check hidden
     event.target.nextElementSibling.style.display = "none";
     validFields.pop("valid");
-    console.log(validFields);
+    // console.log(validFields);
   } else {
     // Change label color
     event.target.previousElementSibling.classList.remove("is-invalid");
@@ -44,7 +46,7 @@ const handleFormInput = event => {
     event.target.nextElementSibling.style.display = "block";
     // Iterate valid field count
     validFields.push("valid");
-    console.log(validFields);
+    // console.log(validFields);
   }
 
   // Take input value and place it into data object that will later stringify to JSON
@@ -58,14 +60,16 @@ const handleSubmit = event => {
   const cartNames = Object.keys(sessionStorage);
   const cartPrices = Object.values(sessionStorage);
   const products = Object.assign({});
-  const shipping = 10.25;
+  const shipping = 8.2;
   let cartNums = [];
   let cartSum = [];
 
   // If sessionStorage is not empty, iterate through items
   if (Object.keys(sessionStorage).length) {
     cartNums = cartPrices.map(el => parseFloat(el));
+    console.log(cartNums);
     cartSum = cartNums.reduce((sum, amount) => sum + amount);
+    console.log(cartSum);
   }
 
   // For every product, associate it with its corresponding price
@@ -96,11 +100,9 @@ const handleSubmit = event => {
   } else {
     cartHasItems = true;
     console.log("Cart has items:", cartHasItems);
-    document.getElementById("form-submit").innerHTML = "PLACE ORDER";
   }
 
   // If form is valid ------------
-  // Log the cart JSON
   if (formIsValid) {
     orderOBJ.cart["products"] = products;
     orderOBJ.cart.total["sub_total"] = `$${cartSum}`;
@@ -109,15 +111,39 @@ const handleSubmit = event => {
     const orderJSON = JSON.stringify(cart);
     const finalShippingJSON = JSON.stringify(shippingOBJ);
 
-    // If form is valid and cart is not empty, log and alert the JSON
+    // If form is valid and cart is not empty
     if (formIsValid && cartHasItems) {
+      // Takes bold style off of cart info after completing form
+      cartSummary.forEach(price => {
+        price.lastElementChild.style.fontWeight = "400";
+      });
+
+      // Reveal shipping and total cost
+      document.getElementById("shipping-amount").innerHTML = "$8.20 CAD";
+      document.getElementById("total-amount").innerHTML = `$${withShipping}`;
+
+      // Reveals lower portion of form
+      revealHidden = true;
       showHidden();
 
+      // Changes submit button copy
+      document.getElementById("form-submit").innerHTML = "PLACE ORDER";
+      submitCount++;
+      console.log(submitCount);
+
+      // Alerts order and shipping JSON if the submit button is hit for the 2nd time
+    }
+
+    if (submitCount > 1) {
       console.log(orderJSON);
-      alert(`Confirm Order Information:" ${orderJSON}`);
+      alert(
+        `Thank you for your order! Here is your order information: ${orderJSON}`
+      );
 
       console.log(finalShippingJSON);
-      alert(`Confirm Shipping Information: ${finalShippingJSON}`);
+      alert(
+        `Expect standard shipping to arrive in 5-7 business days. ${finalShippingJSON}`
+      );
     }
   }
 };
