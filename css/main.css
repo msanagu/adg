@@ -296,6 +296,9 @@ body .cart {
   border-top: 0.75px solid rgba(0, 0, 0, 0.25);
   border-left: 0.75px solid rgba(0, 0, 0, 0.25);
   padding-bottom: 30rem; }
+  body .cart #cart-items .cart-item .item-img-border img.item-img {
+    height: 55px;
+    width: auto; }
   body .cart .cart-item,
   body .cart .tax,
   body .cart .shipping,
