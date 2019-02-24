@@ -4,22 +4,23 @@
 const paymentForm = document.getElementById("payment-form");
 const lowerForm = document.getElementById("hidden-form");
 const cartSummary = document.querySelectorAll(".cart-summary");
+let orderOBJ = {
+  cart: {
+    products: "",
+    total: {
+      sub_total: "",
+      shipping: "$8.20",
+      grand_total: ""
+    }
+  }
+};
 let shippingOBJ = {};
 let validFields = [];
-let formIsValid = false;
-let cartHasItems = false;
 let submitCount = 0;
 
-const showHidden = () => {
-  // Shows hidden part of form
-  lowerForm.style.display = "block";
-};
-
+// If user clicks or tabs into input field, toggle active class
 const toggleActive = event => {
   let inputField = event.target || event.srcElement;
-
-  // If user is currently typing in field, toggle active class
-  inputField.classList.add("active");
   let label = inputField.previousElementSibling;
   label.classList.add("active");
   label.style.display = label.style.display === "none" ? "none" : "";
@@ -28,25 +29,22 @@ const toggleActive = event => {
 // Handles form input, validates each field, and updates shippingOBJ
 const handleFormInput = event => {
   event = event || window.event;
+  let inputField = event.target || event.srcElement;
   let inputValue = event.target.value || event.srcElement;
   let inputName = event.target.name;
 
   // Change from red/green & show check based on bootstrap validation
-  if (event.target.classList.contains("is-invalid")) {
+  if (inputField.classList.contains("is-invalid")) {
     // Change label color
-    event.target.previousElementSibling.classList.add("is-invalid");
-    // Keep check hidden
-    event.target.nextElementSibling.style.display = "none";
+    inputField.previousElementSibling.classList.add("is-invalid");
     validFields.pop("valid");
-    // console.log(validFields);
   } else {
+    inputField.classList.add("active");
     // Change label color
-    event.target.previousElementSibling.classList.remove("is-invalid");
+    inputField.previousElementSibling.classList.remove("is-invalid");
     // Show Check
-    event.target.nextElementSibling.style.display = "block";
-    // Iterate valid field count
+    inputField.nextElementSibling.style.display = "block";
     validFields.push("valid");
-    // console.log(validFields);
   }
 
   // Take input value and place it into data object that will later stringify to JSON
@@ -57,62 +55,56 @@ const handleSubmit = event => {
   event.preventDefault();
 
   // Loops through sessionStorage to get selected product data
-  const cartNames = Object.keys(sessionStorage);
-  const cartPrices = Object.values(sessionStorage);
-  const products = Object.assign({});
+  const products = { ...sessionStorage };
+  const cartNames = Object.keys(products);
+  const cartPrices = Object.values(products);
   const shipping = 8.2;
   let cartNums = [];
   let cartSum = [];
 
   // If sessionStorage is not empty, iterate through items
-  if (Object.keys(sessionStorage).length) {
+  if (cartNames && cartNames.length) {
     cartNums = cartPrices.map(el => parseFloat(el));
     console.log(cartNums);
     cartSum = cartNums.reduce((sum, amount) => sum + amount);
     console.log(cartSum);
   }
 
-  // For every product, associate it with its corresponding price
-  cartNames.forEach(name => {
-    cartPrices.forEach(price => {
-      products[name] = price;
-    });
-  });
-
   // Add Shipping
   let withShipping = cartSum + shipping;
 
-  // Save the total price as JSON
-  total = Object.assign({ withShipping });
-
   // Form is ready for submitting if all form fields are valid
   // TODO: Fix - invalid field being overlooked because there are 2 optional fields
-  if (validFields.length >= 8) {
-    formIsValid = true;
-  } else {
-    alert("Please complete form.");
-  }
-  console.log("Form is valid:", formIsValid);
 
-  // Form is ready for submitting if cart is not empty
-  if (cartPrices.length == 0) {
-    alert("Your cart is empty.");
-  } else {
-    cartHasItems = true;
-    console.log("Cart has items:", cartHasItems);
-  }
+  validateFormFields = fields => {
+    // Form is ready for submitting if cart is not empty
+    const valid = fields && fields.length >= 8;
+    if (!valid) {
+      alert("Please complete form.");
+    }
+    return valid;
+  };
+
+  validateCart = cart => {
+    // Form is ready for submitting if cart is not empty
+    const valid = cart && cart.length !== 0;
+    if (!valid) {
+      alert("Your cart is empty.");
+    }
+    return valid;
+  };
 
   // If form is valid ------------
-  if (formIsValid) {
+  if (validateFormFields(validFields)) {
     orderOBJ.cart["products"] = products;
     orderOBJ.cart.total["sub_total"] = `$${cartSum}`;
     orderOBJ.cart.total["grand_total"] = `$${withShipping}`;
     const cart = Object.assign({}, orderOBJ);
     const orderJSON = JSON.stringify(cart);
-    const finalShippingJSON = JSON.stringify(shippingOBJ);
+    // const finalShippingJSON = JSON.stringify(shippingOBJ);
 
     // If form is valid and cart is not empty
-    if (formIsValid && cartHasItems) {
+    if (validateFormFields(validFields) && validateCart(cartPrices)) {
       // Takes bold style off of cart info after completing form
       cartSummary.forEach(price => {
         price.lastElementChild.style.fontWeight = "400";
@@ -124,19 +116,22 @@ const handleSubmit = event => {
       document.getElementById("total-amount").innerHTML = `$${withShipping}`;
 
       // Reveals lower portion of form
-      revealHidden = true;
-      showHidden();
+      lowerForm.style.display = "block";
 
       // Changes submit button copy
       document.getElementById("form-submit").innerHTML = "PLACE ORDER";
+
+      // Increment how many times submit has been clicked
       submitCount++;
     }
 
     if (submitCount > 1) {
       console.log(orderJSON);
-      console.log(finalShippingJSON);
+      console.log(JSON.stringify(shippingOBJ));
       alert(
-        `Thank you for your order! Here is your order information: ${orderJSON} Expect standard shipping to arrive in 5-7 business days. ${finalShippingJSON}`
+        `Thank you for your order! Here is your order information: ${orderJSON} Expect standard shipping to arrive in 5-7 business days. ${JSON.stringify(
+          shippingOBJ
+        )}`
       );
     }
   }
