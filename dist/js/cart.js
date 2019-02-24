@@ -1,31 +1,12 @@
 // ----------------------------------------------------------
 // ORDER OPTIONS & CART
 
-let orderOBJ = {
-  cart: {
-    products: "",
-    total: {
-      sub_total: "",
-      shipping: "$8.20",
-      grand_total: ""
-    }
-  }
-};
-
 let markupArr = [];
 let finalMarkup = "";
 
 // Adds green background and border when selected
 const toggleOption = option => {
-  // Set initial state of option
-  let isSelected = false;
-
-  if (!isSelected) {
-    option.parentNode.classList.toggle("selected");
-  }
-
-  // Set option state
-  isSelected = !isSelected;
+  option.parentNode.classList.toggle("selected");
   extractProductData(option.parentNode);
 };
 
@@ -35,9 +16,7 @@ const extractProductData = option => {
   const price = priceString.innerHTML
     .toString()
     .split(" ")
-    .filter(el => {
-      return el.startsWith("$");
-    })[0];
+    .filter(el => el.startsWith("$"))[0];
 
   // Extract dollar amount from element and return as string
   const priceNum = parseFloat(price.match(/\d+\.\d+/g));
@@ -77,17 +56,17 @@ const extractProductData = option => {
   const cartNums = cartPrices.map(el => parseFloat(el));
   const cartSum = cartNums.reduce((sum, amount) => sum + amount);
 
-  console.log(cartPrices);
-  console.log(cartNums);
-  console.log(cartSum);
-
   // Populate cart-item div with final markup
   const cartWrapper = document.getElementById("cart-items");
   const totalAmount = document.getElementById("total-amount");
 
   finalMarkup = markupArr.join("");
   cartWrapper.innerHTML = finalMarkup;
-  console.log(totalAmount);
+
+  if (!markupArr.length) {
+    cartWrapper.innerHTML = "";
+  }
+
   totalAmount.innerHTML = `$${cartSum}`;
 };
 
