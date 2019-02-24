@@ -65,9 +65,7 @@ const handleSubmit = event => {
   // If sessionStorage is not empty, iterate through items
   if (cartNames && cartNames.length) {
     cartNums = cartPrices.map(el => parseFloat(el));
-    console.log(cartNums);
     cartSum = cartNums.reduce((sum, amount) => sum + amount);
-    console.log(cartSum);
   }
 
   // Add Shipping
