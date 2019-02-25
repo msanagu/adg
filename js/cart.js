@@ -1,8 +1,7 @@
 // ----------------------------------------------------------
 // ORDER OPTIONS & CART
 
-let markupArr = [];
-let finalMarkup = "";
+const cartMarkup = [];
 
 // Adds green background and border when selected
 const toggleOption = option => {
@@ -19,9 +18,8 @@ const extractProductData = option => {
     .filter(el => el.startsWith("$"))[0];
 
   // Extract dollar amount from element and return as string
-  const priceNum = parseFloat(price.match(/\d+\.\d+/g));
-  const optionName = option.querySelector(".name");
-  const name = optionName.innerHTML.toString();
+  const product = option.querySelector(".name");
+  const productName = product.innerHTML.toString();
 
   // If option is selected, add its price to the sessionStorage
   if (option.classList.contains("selected")) {
@@ -37,35 +35,47 @@ const extractProductData = option => {
         </div>
         <div class="item-name">
           <p>
-            ${name}
+            ${productName}
           </p>
         </div>
         <p class="item-price">${price}</p>
       </div>
       <hr />`;
 
-    markupArr.push(markup);
-    sessionStorage.setItem(name, priceNum);
+    // Take product item html and populate the cart wrapper div
+    cartMarkup.push(markup);
+
+    // Store product name and price in sessionStorage
+    const productPrice = parseFloat(price.match(/\d+\.\d+/g)) || 0.0;
+    sessionStorage.setItem(productName, productPrice);
+
+    // Change button copy to inform user that item has been added to cart
     option.querySelector(".cta").innerHTML = "Remove From Cart";
   } else {
-    markupArr.pop();
-    sessionStorage.removeItem(name);
+    // Remove product item html from cart wrapper div
+    cartMarkup.pop();
+
+    // Remove product name and price from sessionStorage
+    sessionStorage.removeItem(productName);
+
+    // Change button copy to inform user that item is not in cart
     option.querySelector(".cta").innerHTML = "Add To Cart";
   }
-  const cartPrices = Object.values(sessionStorage);
-  const cartNums = cartPrices.map(el => parseFloat(el));
-  const cartSum = cartNums.reduce((sum, amount) => sum + amount);
 
   // Populate cart-item div with final markup
   const cartWrapper = document.getElementById("cart-items");
+  cartWrapper.innerHTML = !cartMarkup.length ? "" : cartMarkup.join("");
+
+  // Populate total-amount div with sum
+  const products = { ...sessionStorage };
+  const cartPrices = Object.values(products);
+  const cartSum = !cartPrices.length
+    ? 0.0
+    : cartPrices
+        .map(el => parseFloat(el))
+        .reduce((sum, amount) => sum + amount);
+
   const totalAmount = document.getElementById("total-amount");
-
-  finalMarkup = markupArr.join("");
-  cartWrapper.innerHTML = finalMarkup;
-
-  if (!markupArr.length) {
-    cartWrapper.innerHTML = "";
-  }
 
   totalAmount.innerHTML = `$${cartSum}`;
 };
@@ -76,6 +86,6 @@ const extractProductData = option => {
 // Toggles style change, extracts price, adds product to cart
 const handleOptionClick = event => {
   event = event || window.event;
-  let selectedOption = event.target || event.srcElement;
+  const selectedOption = event.target || event.srcElement;
   toggleOption(selectedOption);
 };
