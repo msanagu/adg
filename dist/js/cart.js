@@ -77,7 +77,7 @@ const extractProductData = option => {
 
   const totalAmount = document.getElementById("total-amount");
 
-  totalAmount.innerHTML = `$${cartSum}`;
+  totalAmount.innerHTML = `$${cartSum.toFixed(2)}`;
 };
 
 // ----------------------------------------------------------
