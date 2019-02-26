@@ -90,8 +90,8 @@ const handleSubmit = event => {
     // Calculate cartSum and totalDue
     const totalDue = cartSum + shipping;
     orderOBJ.cart["products"] = products;
-    orderOBJ.cart.total["sub_total"] = `$${cartSum}`;
-    orderOBJ.cart.total["grand_total"] = `$${totalDue}`;
+    orderOBJ.cart.total["sub_total"] = `$${cartSum.toFixed(2)}`;
+    orderOBJ.cart.total["grand_total"] = `$${totalDue.toFixed(2)}`;
     const cart = Object.assign({}, orderOBJ);
     const orderJSON = JSON.stringify(cart);
 
@@ -103,7 +103,9 @@ const handleSubmit = event => {
     // Reveal shipping and total cost
     document.getElementById("shipping-amount").innerHTML = "$8.20 CAD";
     document.getElementById("sub-total").innerHTML = "Total";
-    document.getElementById("total-amount").innerHTML = `$${totalDue}`;
+    document.getElementById("total-amount").innerHTML = `$${totalDue.toFixed(
+      2
+    )}`;
 
     // Reveals lower portion of form
     lowerForm.style.display = "block";
